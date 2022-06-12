@@ -25,6 +25,8 @@ public class Nesy_Sneak1: MonoBehaviour
         if (collision.CompareTag(Tag))
         {
             Destroy(Player);
+            GameManeger script1 = GameObject.Find("GameManeger").GetComponent<GameManeger>();
+            script1.swith();
             Debug.Log(collision.name);
         }
     }
