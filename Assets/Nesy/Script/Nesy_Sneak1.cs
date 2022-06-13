@@ -12,7 +12,7 @@ public class Nesy_Sneak1: MonoBehaviour
 
     void Start()
     {
-
+        gamemaneger = GameObject.Find("GameManeger");
     }
 
     // Update is called once per frame
@@ -20,13 +20,14 @@ public class Nesy_Sneak1: MonoBehaviour
     {
 
     }
+
+    public GameObject gamemaneger;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(Tag))
         {
             Destroy(Player);
-            GameManeger script1 = GameObject.Find("GameManeger").GetComponent<GameManeger>();
-            script1.swith();
+            gamemaneger.GetComponent<GameManeger>().SceneLoad();
             Debug.Log(collision.name);
         }
     }
