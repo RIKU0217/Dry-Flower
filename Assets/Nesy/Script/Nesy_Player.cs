@@ -35,6 +35,8 @@ public class Nesy_Player : MonoBehaviour
 
         Directer();
     }
+
+    
     public void Animation()
     {
         if (playerdirection.x == 0 && playerdirection.y == -1)
