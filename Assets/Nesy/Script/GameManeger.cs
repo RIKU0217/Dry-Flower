@@ -33,4 +33,16 @@ public class GameManeger : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    [SerializeField]
+    GameObject Howit;
+    public void Howitfrashtrue()
+    {
+        Howit.SetActive(true);
+    }
+
+    public void Howitfrashfale()
+    {
+        Howit.SetActive(false);
+    }
 }
