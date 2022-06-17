@@ -45,4 +45,44 @@ public class GameManeger : MonoBehaviour
     {
         Howit.SetActive(false);
     }
+
+    public void BasibasiSE()
+    {
+        Nesy_SoundManager.instance.PlaySE(0);
+    }
+
+    public Fungus.Flowchart flowchart = null;
+
+    public string sendMessage;
+
+    public int x = 0;
+    public void StartFungusFromEventPlane()
+    {
+        if (x == 1)
+        {
+            flowchart.SendFungusMessage(sendMessage);
+        }
+        else
+        {
+            x = 1;
+        }
+    }
+
+    public bool FungusFinish;
+    public void FinishFungus()
+    {
+        FungusFinish = true;
+    }
+
+    [SerializeField]
+    GameObject Animation;
+    public void AnimationStart()
+    {
+        if (FungusFinish == true)
+        {
+            Animation.SetActive(true);
+        }
+    }
+
+
 }
