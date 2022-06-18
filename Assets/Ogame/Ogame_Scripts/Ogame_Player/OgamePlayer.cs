@@ -6,6 +6,7 @@ public class OgamePlayer : MonoBehaviour
 {
     public Vector2 playerdirection;
     private byte dir;
+    private bool playPermission = true;
 
     public GameObject attackPoint;
 
@@ -19,7 +20,10 @@ public class OgamePlayer : MonoBehaviour
 
     void Update()
     {
-        Move();
+        if (playPermission == true)
+        {
+            Move();
+        }
         MoveClamp();
         Directer();
         Attack();
@@ -34,7 +38,7 @@ public class OgamePlayer : MonoBehaviour
         float count = 0;
         count = Mathf.Clamp(count, 0, 1f);
 
-       // Debug.Log(count);
+        //Debug.Log(count);
         //Debug.Log(isCalledOnce);
 
         if (Input.GetKey(KeyCode.Z) & isCalledOnce == false)
@@ -43,6 +47,7 @@ public class OgamePlayer : MonoBehaviour
             at = Instantiate(attackPoint, new Vector3(transform.position.x + attackX[dir], transform.position.y + attackY[dir], 0),
                                                                 Quaternion.Euler(0, 0, attackR[dir]), this.transform);
             isCalledOnce = true;
+            playPermission = false;
             Invoke("DestroyAttackPoint", 0.5f);
             Invoke("CoolTimeReset", 1f);
         }
@@ -50,6 +55,7 @@ public class OgamePlayer : MonoBehaviour
     void DestroyAttackPoint()
     {
         Destroy(at);
+        playPermission = true;
     }
     void CoolTimeReset()
     {
@@ -73,7 +79,7 @@ public class OgamePlayer : MonoBehaviour
 
     void MoveClamp()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.5f, 3.5f), Mathf.Clamp(transform.position.y, -3.5f, 3.5f), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8.4f, 8.4f), Mathf.Clamp(transform.position.y, -4.5f, 4.5f), 0);
     }
 
     void Directer()
