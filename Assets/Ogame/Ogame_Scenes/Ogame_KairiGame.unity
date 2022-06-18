@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerdirection: {x: 0, y: 0}
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 3004953458912221574, guid: 1687ff57f4080fa469125a5b416cceee, type: 3}
 --- !u!50 &1921677147
 Rigidbody2D:
   serializedVersion: 4

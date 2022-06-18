@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playeahhhhhhh : MonoBehaviour
+public class OgamePlayer : MonoBehaviour
 {
     public Vector2 playerdirection;
     private byte dir;
 
     public GameObject attackPoint;
+
+    private bool isCalledOnce = false;
+    private GameObject at;
 
     void Start()
     {
@@ -24,7 +27,33 @@ public class Playeahhhhhhh : MonoBehaviour
 
     void Attack()
     {
-        
+        float[] attackX = { 0, 0, -0.8f, 0.8f };
+        float[] attackY = { -0.8f, 0.8f, 0, 0 };
+        float[] attackR = { 0, 0, 90f, 90f };
+
+        float count = 0;
+        count = Mathf.Clamp(count, 0, 1f);
+
+       // Debug.Log(count);
+        //Debug.Log(isCalledOnce);
+
+        if (Input.GetKey(KeyCode.Z) & isCalledOnce == false)
+        {
+            //Debug.Log("“®‚¢‚Ä‚é‚æ");
+            at = Instantiate(attackPoint, new Vector3(transform.position.x + attackX[dir], transform.position.y + attackY[dir], 0),
+                                                                Quaternion.Euler(0, 0, attackR[dir]), this.transform);
+            isCalledOnce = true;
+            Invoke("DestroyAttackPoint", 0.5f);
+            Invoke("CoolTimeReset", 1f);
+        }
+    }
+    void DestroyAttackPoint()
+    {
+        Destroy(at);
+    }
+    void CoolTimeReset()
+    {
+        isCalledOnce = false;
     }
 
     void Move()
