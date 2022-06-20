@@ -9,6 +9,7 @@ public class OgamePlayer : MonoBehaviour
     private bool playPermission = true;
 
     public GameObject attackPoint;
+    public float speed;
 
     private bool isCalledOnce = false;
     private GameObject at;
@@ -38,15 +39,12 @@ public class OgamePlayer : MonoBehaviour
         float count = 0;
         count = Mathf.Clamp(count, 0, 1f);
 
-        //Debug.Log(count);
-        //Debug.Log(isCalledOnce);
-
         if (Input.GetKey(KeyCode.Z) & isCalledOnce == false)
         {
-            //Debug.Log("“®‚¢‚Ä‚é‚æ");
             at = Instantiate(attackPoint, new Vector3(transform.position.x + attackX[dir], transform.position.y + attackY[dir], 0),
                                                                 Quaternion.Euler(0, 0, attackR[dir]), this.transform);
             isCalledOnce = true;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             playPermission = false;
             Invoke("DestroyAttackPoint", 0.5f);
             Invoke("CoolTimeReset", 1f);
@@ -64,17 +62,7 @@ public class OgamePlayer : MonoBehaviour
 
     void Move()
     {
-        float x = Mathf.Round(Input.GetAxisRaw("Horizontal"));
-        float y = Mathf.Round(Input.GetAxisRaw("Vertical"));
-
-        if (x != 0 && y != 0)
-        {
-            transform.position += new Vector3(4f * x, 4f * y, 0) * Time.deltaTime / Mathf.Sqrt(2);
-        }
-        else
-        {
-            transform.position += new Vector3(4f * x, 4f * y, 0) * Time.deltaTime;
-        }
+        GetComponent<Rigidbody2D>().velocity = playerdirection * speed;
     }
 
     void MoveClamp()
