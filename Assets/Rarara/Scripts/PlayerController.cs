@@ -2,39 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_ : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public Vector2 playerdirection;//自分の向きを取得する
 
-    [SerializeField, Tooltip("移動スピード")]
-    private int speed;//自分の移動スピードを取得する
+    [SerializeField] private int speed;//自分の移動スピードを取得する
 
-    public Rigidbody2D rb2d;//自分のリジッドボディを取得する
-
-    [SerializeField, Tooltip("Player-animation")]
+    private Rigidbody2D rb;
     private Animator anim;
 
-    [SerializeField, Tooltip("キーボード入力のオンオフ")]
-    public bool onoff;
 
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (onoff == true)
-        {
-            Move();
-        }
-        Animation();
-
         Directer();
+        Move();
+        Animation();
     }
+
+    public void Directer()
+    {
+        //キーボードからの入力を格納
+        playerdirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+    }
+
+    public void Move()
+    {
+        //リジッドボディに力加えることでキャラを動かす
+        rb.velocity = playerdirection * speed;
+    }
+
     public void Animation()
     {
         if (playerdirection.x == 0 && playerdirection.y == -1)
@@ -57,16 +59,5 @@ public class Player_ : MonoBehaviour
             anim.SetFloat("X", 1f);
             anim.SetFloat("Y", 0);//right
         }
-    }
-
-    public void Directer()
-    {
-        //キーボードからの入力を格納
-        playerdirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-    }
-    public void Move()
-    {
-        //リジッドボディに力加えることでキャラを動かす
-        rb2d.velocity = playerdirection * speed;
     }
 }
