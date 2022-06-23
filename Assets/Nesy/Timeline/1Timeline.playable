@@ -117,7 +117,6 @@ MonoBehaviour:
     - {fileID: 6409916602907094498}
     - {fileID: -7907852306170553693}
     - {fileID: 2564739252230465343}
-    - {fileID: 7467746181261220195}
 --- !u!74 &-3448691088394984276
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -521,9 +520,9 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: -1565729174960077929}
+  - {fileID: -6169429854357707021}
   - {fileID: 4630897566012430999}
   - {fileID: -4543817615500807690}
-  - {fileID: -6169429854357707021}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -990,19 +989,3 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []
---- !u!114 &7467746181261220195
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
-  m_Name: "\u30B7\u30B0\u30CA\u30EB\u30A8\u30DF\u30C3\u30BF\u30FC"
-  m_EditorClassIdentifier: 
-  m_Time: 0.03333333333333333
-  m_Retroactive: 0
-  m_EmitOnce: 0
-  m_Asset: {fileID: 0}
