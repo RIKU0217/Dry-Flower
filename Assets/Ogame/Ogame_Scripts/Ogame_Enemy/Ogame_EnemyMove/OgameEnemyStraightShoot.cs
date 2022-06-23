@@ -38,7 +38,7 @@ public class OgameEnemyStraightShoot : MonoBehaviour
             if (shootTimer <= 0)
             {
                 Shoot();
-                shootTimer = 0.5f;
+                shootTimer = 1f;
             }
             else if (shootTimer > 0)
             {

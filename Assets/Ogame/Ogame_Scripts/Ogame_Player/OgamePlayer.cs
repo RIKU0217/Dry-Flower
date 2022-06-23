@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OgamePlayer : MonoBehaviour
 {
+    public byte life;
+
     public Vector2 playerdirection;
     private byte dir;
     private bool playPermission = true;
@@ -14,9 +17,13 @@ public class OgamePlayer : MonoBehaviour
     private bool isCalledOnce = false;
     private GameObject at;
 
+    //UIŠÖŒW
+    TextMeshProUGUI hPScore;
+
     void Start()
     {
-
+        life = 6;
+        hPScore = GameObject.Find("HPScore").GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
@@ -28,6 +35,7 @@ public class OgamePlayer : MonoBehaviour
         MoveClamp();
         Directer();
         Attack();
+        HPScore();
     }
 
     void Attack()
@@ -35,9 +43,6 @@ public class OgamePlayer : MonoBehaviour
         float[] attackX = { 0, 0, -0.8f, 0.8f };
         float[] attackY = { -0.8f, 0.8f, 0, 0 };
         float[] attackR = { 0, 0, 90f, 90f };
-
-        float count = 0;
-        count = Mathf.Clamp(count, 0, 1f);
 
         if (Input.GetKey(KeyCode.Z) & isCalledOnce == false)
         {
@@ -93,10 +98,36 @@ public class OgamePlayer : MonoBehaviour
         }
     }
 
+    private void HPScore()
+    {
+        hPScore.SetText("HP : {0}", life / 2);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("EnemyAttackPoint"))
         {
+            if (life != 1)
+            {
+                life -= 1;
+            }
+            else
+            {
+                life = 0;
+                Time.timeScale = 0;
+            }
+        }
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            if (life != 1)
+            {
+                life -= 1;
+            }
+            else
+            {
+                life = 0;
+                Time.timeScale = 0;
+            }
             Destroy(other.gameObject);
         }
     }

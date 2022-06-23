@@ -13,11 +13,11 @@ public class OgameSummonManager : MonoBehaviour
         if (Input.GetKey(KeyCode.C) && isCalledOnce == false)
         {
             Vector3 t = new Vector2(Random.Range(-8f, 8f), 6f);
-            //SummonOneStraight(0, 3f, t, FindToTargetDeg(t));
-            //SummonOneStraightAttack(1, 3f, t, FindToTargetDeg("FlagArea", t));
+            //SummonOneStraight(0, 3f, t, FindToTargetDeg("FlagArea", t));
+            //SummonOneStraightAttack(1, 3f, t, FindToTargetDeg("Player", t));
             //SummonOneChaseAttack(2, 3f, t, 0);
-            //SummonOneStraightShoot(3, 3f, t, FindToTargetDeg("FlagArea", t));
-            SummonOneStraightShootNoStop(4, 3f, t, FindToTargetDeg("Player", t));
+            SummonOneStraightShoot(3, 3f, t, FindToTargetDeg("FlagArea", t));
+            //SummonOneStraightShootNoStop(4, 3f, t, FindToTargetDeg("Player", t));
             isCalledOnce = true;
         }
     }
@@ -43,6 +43,7 @@ public class OgameSummonManager : MonoBehaviour
     {
         GameObject ene = Instantiate(enemy[b], t, Quaternion.Euler(0, 0, mrd));
         ene.GetComponent<OgameEnemyStraightAttack>().v = v;
+        ene.GetComponent<OgameEnemyStraightAttack>().mrd = mrd;
     }
     public void SummonOneChaseAttack(int b, float v, Vector2 t, float mrd)
     {
