@@ -123,27 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &179046187 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 179298358918501623, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
-  m_PrefabInstance: {fileID: 179298359333980449}
+--- !u!50 &1661392584 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 974085637240844363, guid: de7c3c53e76247c47b99be9d9ba2038c, type: 3}
+  m_PrefabInstance: {fileID: 8318638943035427852}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &179046200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179046187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413a2e9bb9475c94aab2a7222b2644d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  moveTime: 2
-  waitTime: 2
-  area: {fileID: 1964069805}
 --- !u!1 &1964069804
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,17 +246,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 952917468, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
-      propertyPath: m_Mass
-      value: 1
+    - target: {fileID: 179046200, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+      propertyPath: area
+      value: 
+      objectReference: {fileID: 1964069805}
+    - target: {fileID: 179046200, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1661392584}
+    - target: {fileID: 179046200, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+      propertyPath: sightAngle
+      value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 952917468, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 952917468, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
-      propertyPath: m_Constraints
-      value: 4
+    - target: {fileID: 179046200, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+      propertyPath: sightMaxDistance
+      value: 53.2
       objectReference: {fileID: 0}
     - target: {fileID: 179298358918501622, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
       propertyPath: m_RootOrder
@@ -322,8 +310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 952917466, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+    - target: {fileID: 7581515109083731018, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
+      propertyPath: m_Name
+      value: Sight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b9ca63b2174a7a448aab68bbf8e3e8d, type: 3}
 --- !u!1001 &8318638943035427852
 PrefabInstance:

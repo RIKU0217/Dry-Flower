@@ -8,6 +8,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float moveTime = 2f; //移動時間
     [SerializeField] private float waitTime = 2f; //待機時間
     [SerializeField] private BoxCollider2D area; //動ける範囲
+    [SerializeField] private Rigidbody2D target;
+    [SerializeField] private float sightAngle;
+    [SerializeField] private float sightMaxDistance;
+
 
     private float timeCounter = 0f;
     private float colXHalf;
@@ -39,6 +43,8 @@ public class EnemyController : MonoBehaviour
             Wait();
         else if (isMove)
             Move();
+
+        Debug.Log(IsVisible());
     }
 
     //待機処理
@@ -130,5 +136,20 @@ public class EnemyController : MonoBehaviour
             rb.position = new Vector2(area.bounds.max.x - colXHalf, rb.position.y);
 
         moveDir = -moveDir;
+    }
+
+    public bool IsVisible()
+    {
+        Vector2 selfPos = rb.position;
+        Vector2 targetPos = target.position;
+
+        Vector2 targetDir = targetPos - selfPos; //ターゲットへの向き
+        float targetDistance = targetDir.magnitude; //ターゲットまでの距離
+
+        float cosHalf = Mathf.Cos(sightAngle / 2 * Mathf.Deg2Rad); //cos(θ/2)
+
+        float innerProduct = Vector2.Dot(moveDir, targetDir.normalized); //自身とターゲットへの向きの内積計算
+
+        return innerProduct > cosHalf && targetDistance < sightMaxDistance;
     }
 }

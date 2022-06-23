@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector2 playerdirection;//自分の向きを取得する
+    private Vector2 playerdirection;//自分の向きを取得する
 
     [SerializeField] private int speed;//自分の移動スピードを取得する
 
