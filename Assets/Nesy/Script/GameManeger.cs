@@ -57,6 +57,7 @@ public class GameManeger : MonoBehaviour
 
     public string sendMessage;
 
+    
     public int x = 0;
     public void StartFungusFromEventPlane()
     {
@@ -68,6 +69,12 @@ public class GameManeger : MonoBehaviour
         {
             x = 1;
         }
+    }
+
+    public void StartFungus()
+    {
+        flowchart.SendFungusMessage("Start");
+        Debug.Log("ee");
     }
 
     public bool FungusFinish;

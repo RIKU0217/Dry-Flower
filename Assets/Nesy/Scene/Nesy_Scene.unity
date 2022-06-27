@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1668206146}
-  sceneName: Sampule
+  sceneName: Nesy_Undoujyou
   Howit: {fileID: 0}
   flowchart: {fileID: 0}
   sendMessage: 

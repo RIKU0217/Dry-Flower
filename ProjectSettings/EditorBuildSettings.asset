@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nesy/Scene/Nesy_Scene.unity
     guid: 4ca5718cc9996664a825bbd8925a3ebd
+  - enabled: 1
+    path: Assets/Nesy/Scene/Nesy_Undoujyou.unity
+    guid: 560c287530c293246a8b1a31f73f0ef1
   m_configObjects: {}
