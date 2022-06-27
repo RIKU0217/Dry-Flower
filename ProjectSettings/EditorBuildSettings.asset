@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nesy/Scene/Sampule.unity
     guid: a93ef9e1c61777b4fbd073d26fac4001
+  - enabled: 1
+    path: Assets/Nesy/Scene/Nesy_Scene.unity
+    guid: 4ca5718cc9996664a825bbd8925a3ebd
   m_configObjects: {}

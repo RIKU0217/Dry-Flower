@@ -18,7 +18,7 @@ public class GameManeger : MonoBehaviour
     }
 
     [SerializeField]
-    public GameObject gameObject;
+    public GameObject  gameObject;
     public void Swith()
     {
         if(gameObject == null)
@@ -29,9 +29,11 @@ public class GameManeger : MonoBehaviour
     }
     [SerializeField]
     private string sceneName;
+
     public void SceneLoad()
     {
         SceneManager.LoadScene(sceneName);
+        Debug.Log("シーンロード");
     }
 
     [SerializeField]
@@ -83,6 +85,8 @@ public class GameManeger : MonoBehaviour
             Animation.SetActive(true);
         }
     }
+
+
 
 
 }
