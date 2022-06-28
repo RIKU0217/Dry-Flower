@@ -33,6 +33,16 @@ public class Nesy_SoundManager : MonoBehaviour
         se[x].Play();
     }
 
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField]
+    private AudioClip clip;
+
+    public void Clip()
+    {
+        source.PlayOneShot(clip);
+    }
+
 
 
 }
