@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private int speed;//自分の移動スピードを取得する
+
     private Vector2 playerdirection;//自分の向きを取得する
 
-    [SerializeField] private int speed;//自分の移動スピードを取得する
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -25,19 +26,19 @@ public class PlayerController : MonoBehaviour
         Animation();
     }
 
-    public void Directer()
+    private void Directer()
     {
         //キーボードからの入力を格納
         playerdirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
     }
 
-    public void Move()
+    private void Move()
     {
         //リジッドボディに力加えることでキャラを動かす
         rb.velocity = playerdirection * speed;
     }
 
-    public void Animation()
+    private void Animation()
     {
         if (playerdirection.x == 0 && playerdirection.y == -1)
         {
