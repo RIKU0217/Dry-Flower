@@ -6,19 +6,81 @@ public class OgameSummonManager : MonoBehaviour
 {
     public GameObject[] enemy;
 
-    bool isCalledOnce = false;
+    //bool isCalledOnce = false;
+
+    private float summonTimer0 = 0;
+    private float summonTimer1 = 4f;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.C) && isCalledOnce == false)
+        SummonUp();
+        SummonSide();
+    }
+
+    private void SummonUp()
+    {
+        if (summonTimer0 <= 0)
         {
             Vector3 t = new Vector2(Random.Range(-8f, 8f), 6f);
-            //SummonOneStraight(0, 3f, t, FindToTargetDeg("FlagArea", t));
-            //SummonOneStraightAttack(1, 3f, t, FindToTargetDeg("Player", t));
-            //SummonOneChaseAttack(2, 3f, t, 0);
-            SummonOneStraightShoot(3, 3f, t, FindToTargetDeg("FlagArea", t));
-            //SummonOneStraightShootNoStop(4, 3f, t, FindToTargetDeg("Player", t));
-            isCalledOnce = true;
+            byte random = (byte)Random.Range(0, 5);
+
+            switch (random)
+            {
+                case 0:
+                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 1:
+                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 2:
+                    SummonOneChaseAttack(2, 2f, t, 0);
+                    break;
+                case 3:
+                    SummonOneStraightShoot(3, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 4:
+                    SummonOneStraightShootNonStop(4, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+            }
+
+            summonTimer0 = 8f;
+        }
+        else
+        {
+            summonTimer0 -= Time.deltaTime;
+        }
+    }
+    private void SummonSide()
+    {
+        if (summonTimer1 <= 0)
+        {
+            Vector3 t = new Vector2(9.5f, Random.Range(-5f, 5f));
+            byte random = (byte)Random.Range(0, 5);
+
+            switch (random)
+            {
+                case 0:
+                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 1:
+                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 2:
+                    SummonOneChaseAttack(2, 2f, t, 0);
+                    break;
+                case 3:
+                    SummonOneStraightShoot(3, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+                case 4:
+                    SummonOneStraightShootNonStop(4, 2f, t, FindToTargetDeg("FlagArea", t));
+                    break;
+            }
+
+            summonTimer1 = 8f;
+        }
+        else
+        {
+            summonTimer1 -= Time.deltaTime;
         }
     }
 
@@ -55,7 +117,7 @@ public class OgameSummonManager : MonoBehaviour
         GameObject ene = Instantiate(enemy[b], t, Quaternion.Euler(0, 0, mrd));
         ene.GetComponent<OgameEnemyStraightShoot>().v = v;
     }
-    public void SummonOneStraightShootNoStop(int b, float v, Vector2 t, float mrd)
+    public void SummonOneStraightShootNonStop(int b, float v, Vector2 t, float mrd)
     {
         GameObject ene = Instantiate(enemy[b], t, Quaternion.Euler(0, 0, mrd));
         ene.GetComponent<OgameEnemyStraightShootNoStop>().v = v;

@@ -2,37 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OgameEnemyStraightShootNoStop : MonoBehaviour
+public class OgameEnemyStopShoot : MonoBehaviour
 {
     public GameObject bullet;
-    private float shootTimer = 0;
-
-    public float v;
-
-    private float vX = 0f;
-    private float vY = 0f;
-    private float vT;
+    private float shootTimer;
 
     private GameObject player;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        vT = -v;
     }
 
     void Update()
     {
         float distance = Vector3.Distance(this.transform.position, player.transform.position);
-        
-        float rd = this.transform.eulerAngles.z;
-
-        vX = vT * Mathf.Sin(rd * Mathf.Deg2Rad);
-        vY = vT * Mathf.Cos(rd * Mathf.Deg2Rad);
-
-        transform.position += new Vector3(vX, vY) * Time.deltaTime;
-        
-        if(distance <= 4f)
+        if (distance <= 6f)
         {
             if (shootTimer <= 0)
             {
