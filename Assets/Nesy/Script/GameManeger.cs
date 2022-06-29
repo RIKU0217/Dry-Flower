@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class GameManeger : MonoBehaviour
 {
@@ -92,6 +94,41 @@ public class GameManeger : MonoBehaviour
             Animation.SetActive(true);
         }
     }
+
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField]
+    private AudioClip clip;
+    public void StartScene()
+    { 
+        source.PlayOneShot(clip);
+        Invoke("SceneLoad", 2);
+
+    }
+
+    [SerializeField]
+    public Image image;
+    [SerializeField]
+    Sprite[] sprites;
+    [SerializeField]
+    float interval;
+    
+    public void DownLoad()
+    {
+        image.sprite = sprites[i];
+    }
+    public int i = 0;
+    public  void Invok()
+    {
+        Debug.Log(sprites.Length);
+       
+            Invoke("DownLoad", interval);
+            i++;
+        
+        
+    }
+
+     
 
 
 
