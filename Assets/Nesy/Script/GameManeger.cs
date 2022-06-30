@@ -17,13 +17,14 @@ public class GameManeger : MonoBehaviour
     void Update()
     {
         Swith();
+        Invok();
     }
 
     [SerializeField]
-    public GameObject  gameObject;
+    public GameObject  gameObject1;
     public void Swith()
     {
-        if(gameObject == null)
+        if(gameObject1 == null)
         {
             SceneLoad();
         }
@@ -112,20 +113,37 @@ public class GameManeger : MonoBehaviour
     Sprite[] sprites;
     [SerializeField]
     float interval;
+
+    private int i = 0;
+
+    bool intervalswith = false;
     
     public void DownLoad()
     {
         image.sprite = sprites[i];
-    }
-    public int i = 0;
-    public  void Invok()
-    {
-        Debug.Log(sprites.Length);
-       
-            Invoke("DownLoad", interval);
+        Debug.Log(sprites);
+        if(i < sprites.Length-1)
+        {
             i++;
+            intervalswith = true;
+        }
         
-        
+    }
+    public void Invok()
+    {   
+        if(intervalswith == true)
+        {
+            Invoke("DownLoad", interval);
+            Debug.Log("Invok");
+            intervalswith = false;
+        }
+    }
+
+    [SerializeField]
+    Text text;
+    public void DestoryText()
+    {
+        Destroy(text);
     }
 
      
