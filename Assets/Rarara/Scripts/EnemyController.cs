@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float waitTime = 2f; //待機時間
     [SerializeField] private BoxCollider2D area; //動ける範囲
     [SerializeField] private Rigidbody2D target;
-    [SerializeField] private float sightAngle = 160f;
+    [SerializeField, Range(0f, 360f)] private float sightAngle = 160f;
     [SerializeField] private float sightMaxDistance = 10f;
     [SerializeField] private float chaseSpeed = 5f;
 
@@ -35,15 +35,14 @@ public class EnemyController : MonoBehaviour
         anim = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
         colXHalf = col.size.x / 2;
-        moveDir = RandomDirection();
+        moveDir = Vector2.down;
         areaMin = new Vector2(area.bounds.min.x, area.bounds.min.y);
         areaMax = new Vector2(area.bounds.max.x, area.bounds.max.y);
     }
 
     private void FixedUpdate()
     {
-
-        
+        Debug.Log(moveDir);
         if (isWait) Wait();
         else if (isMove) MoveAround();
         else if (isChase) Chase();
@@ -78,25 +77,31 @@ public class EnemyController : MonoBehaviour
     //アニメーション推移
     private void Animate()
     {
-        if (moveDir == Vector2.up)
+        if (Mathf.Abs(moveDir.x) <= Mathf.Abs(moveDir.y))
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", 1f);
+            if(moveDir.y >= 0)
+            {
+                anim.SetFloat("X", 0);
+                anim.SetFloat("Y", 1f);
+            }
+            else
+            {
+                anim.SetFloat("X", 0);
+                anim.SetFloat("Y", -1f);
+            }
         }
-        else if (moveDir == Vector2.down)
+        else
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", -1f);
-        }
-        else if (moveDir == Vector2.left)
-        {
-            anim.SetFloat("X", -1f);
-            anim.SetFloat("Y", 0);
-        }
-        else if (moveDir == Vector2.right)
-        {
-            anim.SetFloat("X", 1f);
-            anim.SetFloat("Y", 0);
+            if (moveDir.x >= 0)
+            {
+                anim.SetFloat("X", 1f);
+                anim.SetFloat("Y", 0);
+            }
+            else
+            {
+                anim.SetFloat("X", -1f);
+                anim.SetFloat("Y", 0);
+            }
         }
     }
 
@@ -117,7 +122,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    //巡回処理
+    //巡回
     private void MoveAround()
     {
         if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) || (rb.position.y < areaMin.y + colXHalf) || (rb.position.y > areaMax.y - colXHalf))
@@ -184,7 +189,8 @@ public class EnemyController : MonoBehaviour
     {
         if (IsVisible())
         {
-            Move((target.position - rb.position).normalized, chaseSpeed);
+            moveDir = (target.position - rb.position).normalized;
+            Move(moveDir, chaseSpeed);
         }
         else
         {
