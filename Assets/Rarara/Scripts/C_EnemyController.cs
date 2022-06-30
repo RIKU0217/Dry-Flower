@@ -1,32 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class C_EnemyController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f; //移動速度
     [SerializeField] private float moveTime = 2f; //移動時間
     [SerializeField] private float waitTime = 2f; //待機時間
-    [SerializeField] private BoxCollider2D area; //動ける範囲
     [SerializeField] private Rigidbody2D target;
     [SerializeField, Range(0f, 360f)] private float sightAngle = 160f;
     [SerializeField] private float sightMaxDistance = 10f;
     [SerializeField] private float chaseSpeed = 5f;
 
 
-    private float timeCounter = 0f;
     private float colXHalf;
+    private float colYHalf;
+    private float timeCounter = 0f;
     private bool isWait = true;
     private bool isMove = false;
     private bool isChase = false;
     private Vector2 moveDir; //進行方向
-    private string playerTag = "Player";
     private Vector2 areaMin;
     private Vector2 areaMax;
+    private string playerTag = "Player";
 
-    private Rigidbody2D rb;
-    private Animator anim;
+    [HideInInspector] public Rigidbody2D rb;
     private BoxCollider2D col;
+    private Animator anim;
 
 
     private void Start()
@@ -34,10 +32,11 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
-        colXHalf = col.size.x / 2;
         moveDir = Vector2.down;
-        areaMin = new Vector2(area.bounds.min.x, area.bounds.min.y);
-        areaMax = new Vector2(area.bounds.max.x, area.bounds.max.y);
+        colXHalf = col.size.x / 2;
+        colYHalf = col.size.y / 2;
+        areaMin = new Vector2(C_StageManager.instance.area.bounds.min.x, C_StageManager.instance.area.bounds.min.y);
+        areaMax = new Vector2(C_StageManager.instance.area.bounds.max.x, C_StageManager.instance.area.bounds.max.y);
     }
 
     private void FixedUpdate()
@@ -45,6 +44,8 @@ public class EnemyController : MonoBehaviour
         if (isWait) Wait();
         else if (isMove) MoveAround();
         else if (isChase) Chase();
+
+        LimitMove();
     }
 
     //待機処理
@@ -63,7 +64,7 @@ public class EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible() && !GManager.instance.isHide)
+        if (IsVisible())
         {
             isChase = true;
             isWait = false;
@@ -123,7 +124,8 @@ public class EnemyController : MonoBehaviour
     //巡回処理
     private void MoveAround()
     {
-        if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) || (rb.position.y < areaMin.y + colXHalf) || (rb.position.y > areaMax.y - colXHalf))
+        if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) 
+            || (rb.position.y < areaMin.y + colYHalf) || (rb.position.y > areaMax.y - colYHalf))
             Turn();
 
         if (moveTime > timeCounter)
@@ -138,7 +140,7 @@ public class EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible() && !GManager.instance.isHide)
+        if (IsVisible())
         {
             isChase = true;
             isMove = false;
@@ -157,13 +159,13 @@ public class EnemyController : MonoBehaviour
     private void Turn()
     {
         if (moveDir == Vector2.up)
-            rb.position = new Vector2(rb.position.x, area.bounds.max.y - colXHalf);
+            rb.position = new Vector2(rb.position.x, areaMax.y - colYHalf);
         else if (moveDir == Vector2.down)
-            rb.position = new Vector2(rb.position.x, area.bounds.min.y + colXHalf);
+            rb.position = new Vector2(rb.position.x, areaMin.y + colYHalf);
         else if (moveDir == Vector2.left)
-            rb.position = new Vector2(area.bounds.min.x + colXHalf, rb.position.y);
+            rb.position = new Vector2(areaMin.x + colXHalf, rb.position.y);
         else if (moveDir == Vector2.right)
-            rb.position = new Vector2(area.bounds.max.x - colXHalf, rb.position.y);
+            rb.position = new Vector2(areaMax.x - colXHalf, rb.position.y);
 
         moveDir = -moveDir;
     }
@@ -181,13 +183,13 @@ public class EnemyController : MonoBehaviour
 
         float innerProduct = Vector2.Dot(moveDir, targetDir.normalized); //自身の向きとターゲットへの向きの内積計算
 
-        return innerProduct > cosHalf && targetDistance < sightMaxDistance;
+        return innerProduct > cosHalf && targetDistance < sightMaxDistance && !C_GManager.instance.isHide;
     }
 
     //追跡処理
     private void Chase()
     {
-        if (IsVisible() && !GManager.instance.isHide)
+        if (IsVisible())
         {
             moveDir = (target.position - rb.position).normalized;
             Move(moveDir, chaseSpeed);
@@ -199,14 +201,24 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private void LimitMove()
+    {
+        Vector2 currentPos = rb.position;
+
+        currentPos.x = Mathf.Clamp(currentPos.x, areaMin.x + col.size.x / 2, areaMax.x - col.size.x / 2);
+        currentPos.y = Mathf.Clamp(currentPos.y, areaMin.y + col.size.y / 2, areaMax.y - col.size.y / 2);
+
+        rb.position = currentPos;
+    }
+
+
     //衝突処理
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == playerTag)
         {
-            collision.gameObject.SetActive(false);
             isChase = false;
-            rb.velocity = Vector2.zero;
+            isWait = true;
         }
     }
 }
