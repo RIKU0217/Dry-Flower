@@ -16,13 +16,19 @@ public class HideChecker : MonoBehaviour
         
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    Debug.Log("ddd");
-    //}
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ddd");
+        if(collision.gameObject.tag == "Player")
+        {
+            GManager.instance.isHide = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GManager.instance.isHide = false;
+        }
     }
 }

@@ -6,7 +6,7 @@ public class GManager : MonoBehaviour
 {
     public static GManager instance = null;
 
-    public bool isHide = false;
+    [HideInInspector] public bool isHide = false;
 
     private void Awake()
     {
@@ -14,11 +14,5 @@ public class GManager : MonoBehaviour
             instance = this;
         else
             Destroy(this.gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

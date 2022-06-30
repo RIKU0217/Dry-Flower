@@ -42,12 +42,9 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(moveDir);
         if (isWait) Wait();
         else if (isMove) MoveAround();
         else if (isChase) Chase();
-
-        //Debug.Log(IsVisible());
     }
 
     //‘Ò‹@ˆ—
@@ -66,7 +63,7 @@ public class EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible())
+        if (IsVisible() && !GManager.instance.isHide)
         {
             isChase = true;
             isWait = false;
@@ -108,6 +105,7 @@ public class EnemyController : MonoBehaviour
     //ƒ‰ƒ“ƒ_ƒ€‚Éã‰º¶‰E‚Ì•ûŒü‚ğ¶¬
     private Vector2 RandomDirection()
     {
+        //return new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f)).normalized;
         switch (Random.Range(0, 4))
         {
             default:
@@ -122,7 +120,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    //„‰ñ
+    //„‰ñˆ—
     private void MoveAround()
     {
         if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) || (rb.position.y < areaMin.y + colXHalf) || (rb.position.y > areaMax.y - colXHalf))
@@ -140,7 +138,7 @@ public class EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible())
+        if (IsVisible() && !GManager.instance.isHide)
         {
             isChase = true;
             isMove = false;
@@ -170,6 +168,7 @@ public class EnemyController : MonoBehaviour
         moveDir = -moveDir;
     }
 
+    //‹–ì”»’è
     private bool IsVisible()
     {
         Vector2 selfPos = rb.position;
@@ -185,9 +184,10 @@ public class EnemyController : MonoBehaviour
         return innerProduct > cosHalf && targetDistance < sightMaxDistance;
     }
 
+    //’ÇÕˆ—
     private void Chase()
     {
-        if (IsVisible())
+        if (IsVisible() && !GManager.instance.isHide)
         {
             moveDir = (target.position - rb.position).normalized;
             Move(moveDir, chaseSpeed);
@@ -199,6 +199,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //Õ“Ëˆ—
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == playerTag)
