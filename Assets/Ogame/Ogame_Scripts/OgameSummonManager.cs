@@ -28,19 +28,19 @@ public class OgameSummonManager : MonoBehaviour
             switch (random)
             {
                 case 0:
-                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 1:
-                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 2:
                     SummonOneChaseAttack(2, 2f, t, 0);
                     break;
                 case 3:
-                    SummonOneStraightShoot(3, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShoot(3, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 4:
-                    SummonOneStraightShootNonStop(4, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShootNonStop(4, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
             }
 
@@ -61,19 +61,19 @@ public class OgameSummonManager : MonoBehaviour
             switch (random)
             {
                 case 0:
-                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 1:
-                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 2:
                     SummonOneChaseAttack(2, 2f, t, 0);
                     break;
                 case 3:
-                    SummonOneStraightShoot(3, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShoot(3, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
                 case 4:
-                    SummonOneStraightShootNonStop(4, 2f, t, Test.FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShootNonStop(4, 2f, t, ClassA.FindToTargetDeg("FlagArea", t));
                     break;
             }
 

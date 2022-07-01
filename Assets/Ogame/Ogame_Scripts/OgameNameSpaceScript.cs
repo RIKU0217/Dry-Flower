@@ -21,7 +21,7 @@ namespace Ogame
 {
     namespace System
     {
-        public class Test
+        public class ClassA
         {
             public static float FindToTargetDeg(string s, Vector2 t)
             {
