@@ -87,6 +87,7 @@ public class C_PlayerController : MonoBehaviour
         if(collision.gameObject.tag == goalTag)
         {
             C_GManager.instance.isGameClear = true;
+            enableKeyboard = false;
         }
         else if (collision.gameObject.tag == hideTag)
         {

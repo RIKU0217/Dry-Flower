@@ -64,7 +64,7 @@ public class C_EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible() && !C_GManager.instance.isGameOver)
+        if (IsVisible())
         {
             isChase = true;
             isWait = false;
@@ -158,14 +158,14 @@ public class C_EnemyController : MonoBehaviour
     //É^Å[ÉìÇ∑ÇÈèàóù
     private void Turn()
     {
-        if (moveDir == Vector2.up)
-            rb.position = new Vector2(rb.position.x, areaMax.y - colYHalf);
-        else if (moveDir == Vector2.down)
-            rb.position = new Vector2(rb.position.x, areaMin.y + colYHalf);
-        else if (moveDir == Vector2.left)
-            rb.position = new Vector2(areaMin.x + colXHalf, rb.position.y);
-        else if (moveDir == Vector2.right)
-            rb.position = new Vector2(areaMax.x - colXHalf, rb.position.y);
+        //if (moveDir == Vector2.up)
+        //    rb.position = new Vector2(rb.position.x, areaMax.y - colYHalf);
+        //else if (moveDir == Vector2.down)
+        //    rb.position = new Vector2(rb.position.x, areaMin.y + colYHalf);
+        //else if (moveDir == Vector2.left)
+        //    rb.position = new Vector2(areaMin.x + colXHalf, rb.position.y);
+        //else if (moveDir == Vector2.right)
+        //    rb.position = new Vector2(areaMax.x - colXHalf, rb.position.y);
 
         moveDir = -moveDir;
     }
@@ -215,10 +215,15 @@ public class C_EnemyController : MonoBehaviour
     //è’ìÀèàóù
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == playerTag && !C_GManager.instance.isGameClear)
+        if (collision.gameObject.tag == playerTag)
         {
-            isChase = false;
-            isWait = true;
+            if (!C_GManager.instance.isGameClear)
+            {
+                isChase = false;
+                isWait = true;
+            }
+            else
+                Turn();
         }
     }
 }
