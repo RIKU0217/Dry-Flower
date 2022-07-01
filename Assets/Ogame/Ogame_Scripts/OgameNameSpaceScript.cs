@@ -23,7 +23,7 @@ namespace Ogame
     {
         public class Test
         {
-            public float FindToTargetDeg(string s, Vector2 t)
+            public static float FindToTargetDeg(string s, Vector2 t)
             {
                 Vector2 p1 = t;
                 Vector2 p2 = GameObject.Find(s).transform.position;

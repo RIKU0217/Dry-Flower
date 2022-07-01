@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using Ogame.System;
+using Ogame.System;
 
 public class OgameSummonManager : MonoBehaviour
 {
@@ -28,19 +28,19 @@ public class OgameSummonManager : MonoBehaviour
             switch (random)
             {
                 case 0:
-                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 1:
-                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 2:
                     SummonOneChaseAttack(2, 2f, t, 0);
                     break;
                 case 3:
-                    SummonOneStraightShoot(3, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShoot(3, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 4:
-                    SummonOneStraightShootNonStop(4, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShootNonStop(4, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
             }
 
@@ -61,19 +61,19 @@ public class OgameSummonManager : MonoBehaviour
             switch (random)
             {
                 case 0:
-                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 1:
-                    SummonOneStraight(0, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraight(0, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 2:
                     SummonOneChaseAttack(2, 2f, t, 0);
                     break;
                 case 3:
-                    SummonOneStraightShoot(3, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShoot(3, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
                 case 4:
-                    SummonOneStraightShootNonStop(4, 2f, t, FindToTargetDeg("FlagArea", t));
+                    SummonOneStraightShootNonStop(4, 2f, t, Test.FindToTargetDeg("FlagArea", t));
                     break;
             }
 
@@ -86,7 +86,7 @@ public class OgameSummonManager : MonoBehaviour
     }
 
     //TargetÇ÷ÇÃäpìxÇåvéZ
-    public float FindToTargetDeg(string s, Vector2 t)
+    /*public float FindToTargetDeg(string s, Vector2 t)
     {
         Vector2 p1 = t;
         Vector2 p2 = GameObject.Find(s).transform.position;
@@ -94,7 +94,7 @@ public class OgameSummonManager : MonoBehaviour
         float deg = Mathf.Atan2(dt.y, dt.x) * Mathf.Rad2Deg * (-1) - 90f;
 
         return deg;
-    }
+    }*/
 
     //ìGÇè¢ä´Ç∑ÇÈä÷êî
     public void SummonOneStraight(int b,float v, Vector2 t, float mrd)
