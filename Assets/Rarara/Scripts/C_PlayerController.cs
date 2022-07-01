@@ -86,7 +86,7 @@ public class C_PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == goalTag)
         {
-            C_GManager.instance.isGoal = true;
+            C_GManager.instance.isGameClear = true;
         }
         else if (collision.gameObject.tag == hideTag)
         {
@@ -106,7 +106,11 @@ public class C_PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == enemyTag)
         {
-            this.gameObject.SetActive(false);
+            if (!C_GManager.instance.isGameClear)
+            {
+                C_GManager.instance.isGameOver = true;
+                this.gameObject.SetActive(false);
+            }
         }
     }
 }

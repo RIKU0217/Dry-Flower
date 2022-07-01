@@ -64,7 +64,7 @@ public class C_EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible())
+        if (IsVisible() && !C_GManager.instance.isGameOver)
         {
             isChase = true;
             isWait = false;
@@ -183,7 +183,7 @@ public class C_EnemyController : MonoBehaviour
 
         float innerProduct = Vector2.Dot(moveDir, targetDir.normalized); //自身の向きとターゲットへの向きの内積計算
 
-        return innerProduct > cosHalf && targetDistance < sightMaxDistance && !C_GManager.instance.isHide;
+        return innerProduct > cosHalf && targetDistance < sightMaxDistance && !C_GManager.instance.isHide && !C_GManager.instance.isGameClear && !C_GManager.instance.isGameOver;
     }
 
     //追跡処理
@@ -205,8 +205,8 @@ public class C_EnemyController : MonoBehaviour
     {
         Vector2 currentPos = rb.position;
 
-        currentPos.x = Mathf.Clamp(currentPos.x, areaMin.x + col.size.x / 2, areaMax.x - col.size.x / 2);
-        currentPos.y = Mathf.Clamp(currentPos.y, areaMin.y + col.size.y / 2, areaMax.y - col.size.y / 2);
+        currentPos.x = Mathf.Clamp(currentPos.x, areaMin.x + colXHalf, areaMax.x - colXHalf);
+        currentPos.y = Mathf.Clamp(currentPos.y, areaMin.y + colYHalf, areaMax.y - colYHalf);
 
         rb.position = currentPos;
     }

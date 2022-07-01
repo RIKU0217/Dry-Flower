@@ -15,13 +15,4 @@ public class C_StageManager : MonoBehaviour
         else
             Destroy(this.gameObject);
     }
-
-    private void Update()
-    {
-        if (C_GManager.instance.isGoal)
-        {
-            Debug.Log("Goal");
-            C_GManager.instance.isGoal = false;
-        }
-    }
 }

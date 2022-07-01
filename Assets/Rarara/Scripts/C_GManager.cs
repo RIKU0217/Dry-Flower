@@ -35,4 +35,39 @@ public class C_GManager : MonoBehaviour
             }
         }
     }
+
+    private void Update()
+    {
+        if (isGameClear)
+        {
+            if (!callOnce)
+            {
+                Debug.Log("Goal!    Press 'Enter' to retry ");
+                callOnce = true;
+            }
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                SceneManager.LoadScene("Chiguri");
+                callOnce=false;
+                isGameClear=false;
+            }
+        }
+        
+        if (isGameOver)
+        {
+            if (!callOnce)
+            {
+                Debug.Log("GameOver!    Press 'Enter' to retry ");
+                callOnce = true;
+            }
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                SceneManager.LoadScene("Chiguri");
+                callOnce = false;
+                isGameOver = false;
+            }
+        }
+    }
 }
