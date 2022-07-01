@@ -17,6 +17,9 @@ public class OgamePlayer : MonoBehaviour
     private bool isCalledOnce = false;
     private GameObject at;
 
+    public Rigidbody2D rb2d;//自分のリジッドボディを取得する
+
+
     //UI関係
     TextMeshProUGUI hPScore;
 
@@ -67,7 +70,7 @@ public class OgamePlayer : MonoBehaviour
 
     void Move()
     {
-        GetComponent<Rigidbody2D>().velocity = playerdirection * speed;
+        rb2d.velocity = playerdirection * speed;
     }
 
     void MoveClamp()
