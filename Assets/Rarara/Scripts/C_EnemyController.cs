@@ -215,7 +215,7 @@ public class C_EnemyController : MonoBehaviour
     //Õ“Ëˆ—
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == playerTag)
+        if (collision.gameObject.tag == playerTag && !C_GManager.instance.isGameClear)
         {
             isChase = false;
             isWait = true;
