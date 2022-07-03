@@ -139,6 +139,8 @@ public class GameManeger : MonoBehaviour
         }
     }
 
+  
+
     [SerializeField]
     Text text;
     public void DestoryText()
