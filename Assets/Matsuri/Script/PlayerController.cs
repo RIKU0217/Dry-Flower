@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new.Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical") * moveSpeed);
+        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical") * moveSpeed);
     }
 }
