@@ -127,6 +127,10 @@ public class GameManeger : MonoBehaviour
             i++;
             intervalswith = true;
         }
+        else
+        {
+            SceneLoad();
+        }
         
     }
     public void Invok()
