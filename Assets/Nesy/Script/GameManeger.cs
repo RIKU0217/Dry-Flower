@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class GameManeger : MonoBehaviour
 {
@@ -152,9 +153,5 @@ public class GameManeger : MonoBehaviour
         Destroy(text);
     }
 
-     
-
-
-
-
+ 
 }

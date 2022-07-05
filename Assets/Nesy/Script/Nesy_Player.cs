@@ -5,8 +5,10 @@ using UnityEngine;
 public class Nesy_Player : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [SerializeField]
     public Vector2 playerdirection;//自分の向きを取得する
+
+    public Vector2 thistransform;
 
     [SerializeField, Tooltip("移動スピード")]
     private int speed;//自分の移動スピードを取得する
@@ -34,6 +36,7 @@ public class Nesy_Player : MonoBehaviour
         Animation();
 
         Directer();
+
     }
 
     
@@ -61,6 +64,30 @@ public class Nesy_Player : MonoBehaviour
         }
     }
 
+    public void FrontAnim()
+    {
+        anim.SetFloat("X", 0);
+        anim.SetFloat("Y", -1f);
+    }
+    public void BackAnim()
+    {
+        anim.SetFloat("X", 0);
+        anim.SetFloat("Y", 1f);//back
+    }
+    public void RightAnim()
+    {
+        anim.SetFloat("X", 1f);
+        anim.SetFloat("Y", 0);//right
+    }
+    public void LeftAnim()
+    {
+        anim.SetFloat("X", -1f);
+        anim.SetFloat("Y", 0);//left
+    }
+
+
+
+
     public void Directer()
     {
         //キーボードからの入力を格納
@@ -71,4 +98,18 @@ public class Nesy_Player : MonoBehaviour
         //リジッドボディに力加えることでキャラを動かす
         rb2d.velocity = playerdirection * speed;
     }
+
+    public void Trans()
+    {
+        thistransform = this.transform.position;
+    }
+
+    public void Trans2()
+    {
+        this.transform.position = thistransform;
+    }
+
+
+
+
 }
