@@ -23,7 +23,8 @@ public class Nesy_Player : MonoBehaviour
 
     void Start()
     {
-
+        playerdirection.x = 0;
+        playerdirection.y = 1;
     }
 
     // Update is called once per frame
@@ -99,15 +100,7 @@ public class Nesy_Player : MonoBehaviour
         rb2d.velocity = playerdirection * speed;
     }
 
-    public void Trans()
-    {
-        thistransform = this.transform.position;
-    }
-
-    public void Trans2()
-    {
-        this.transform.position = thistransform;
-    }
+   
 
 
 
