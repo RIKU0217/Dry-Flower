@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class C_EnemyController : MonoBehaviour
@@ -5,10 +7,12 @@ public class C_EnemyController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f; //移動速度
     [SerializeField] private float moveTime = 2f; //移動時間
     [SerializeField] private float waitTime = 2f; //待機時間
-    [SerializeField] private Rigidbody2D target;
+    [SerializeField] private float beforeChaseTime = 0.3f; //発見後の待機時間
+    [SerializeField] private float afterChaseTime = 0.3f; //見失い後の待機時間
     [SerializeField, Range(0f, 360f)] private float sightAngle = 160f;
     [SerializeField] private float sightMaxDistance = 10f;
-    [SerializeField] private float chaseSpeed = 5f;
+    [SerializeField] private float chaseSpeed = 3f;
+    [SerializeField] private bool notMoveAround;
 
 
     private float colXHalf;
@@ -22,17 +26,39 @@ public class C_EnemyController : MonoBehaviour
     private Vector2 areaMax;
     private string playerTag = "Player";
 
-    [HideInInspector] public Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private Rigidbody2D target;
     private BoxCollider2D col;
     private Animator anim;
+    [SerializeField] private GameObject findedText;
+    [SerializeField] private GameObject missText;
 
+    private enum InitDir
+    {
+        up,
+        down,
+        left,
+        right,
+    }
+
+    [SerializeField] private InitDir initDir;
+
+    Dictionary<string, Vector2> udlr = new Dictionary<string, Vector2>() 
+    {
+        {"up", Vector2.up},
+        {"down", Vector2.down},
+        {"left", Vector2.left},
+        {"right", Vector2.right}
+    };
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
-        moveDir = Vector2.down;
+        moveDir = udlr[initDir.ToString()];
+        Animate();
         colXHalf = col.size.x / 2;
         colYHalf = col.size.y / 2;
         areaMin = new Vector2(C_StageManager.instance.area.bounds.min.x, C_StageManager.instance.area.bounds.min.y);
@@ -48,31 +74,42 @@ public class C_EnemyController : MonoBehaviour
         LimitMove();
     }
 
-    //待機処理
+    /// <summary>
+    /// 待機処理
+    /// </summary>
     private void Wait()
     {
-        if (waitTime > timeCounter)
+        if (!notMoveAround)
         {
-            timeCounter += Time.deltaTime;
-            rb.velocity = Vector2.zero;
+            if (waitTime > timeCounter)
+            {
+                timeCounter += Time.deltaTime;
+                rb.velocity = Vector2.zero;
+            }
+            else
+            {
+                moveDir = RandomDirection();
+                isWait = false;
+                isMove = true;
+                timeCounter = 0f;
+            }
         }
         else
         {
-            moveDir = RandomDirection();
-            isWait = false;
-            isMove = true;
-            timeCounter = 0f;
+            rb.velocity = Vector2.zero;
         }
 
         if (IsVisible())
         {
-            isChase = true;
             isWait = false;
             timeCounter = 0f;
+            StartCoroutine(Finded());
         }
     }
 
-    //アニメーション推移
+    /// <summary>
+    /// アニメーション推移
+    /// </summary>
     private void Animate()
     {
         if (Mathf.Abs(moveDir.x) <= Mathf.Abs(moveDir.y))
@@ -103,7 +140,10 @@ public class C_EnemyController : MonoBehaviour
         }
     }
 
-    //ランダムに上下左右の方向を生成
+    /// <summary>
+    /// ランダムに上下左右の方向を生成
+    /// </summary>
+    /// <returns>上下左右の単位ベクトル</returns>
     private Vector2 RandomDirection()
     {
         //return new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f)).normalized;
@@ -121,7 +161,9 @@ public class C_EnemyController : MonoBehaviour
         }
     }
 
-    //巡回処理
+    /// <summary>
+    /// 巡回処理
+    /// </summary>
     private void MoveAround()
     {
         if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) 
@@ -130,8 +172,18 @@ public class C_EnemyController : MonoBehaviour
 
         if (moveTime > timeCounter)
         {
-            timeCounter += Time.deltaTime;
             Move(moveDir, moveSpeed);
+            if (IsVisible())
+            {
+                isMove = false;
+                timeCounter = 0f;
+                rb.velocity = Vector2.zero;
+                StartCoroutine(Finded());
+            }
+            else
+            {
+                timeCounter += Time.deltaTime;
+            }
         }
         else
         {
@@ -140,22 +192,23 @@ public class C_EnemyController : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (IsVisible())
-        {
-            isChase = true;
-            isMove = false;
-            timeCounter = 0f;
-        }
+        
     }
 
-    //移動処理
+    /// <summary>
+    /// 移動処理
+    /// </summary>
+    /// <param name="dir">移動方向</param>
+    /// <param name="speed">移動速度</param>
     private void Move(Vector2 dir, float speed)
     {
         rb.velocity = dir * speed;
         Animate();
     }
 
-    //ターンする処理
+    /// <summary>
+    /// ターン処理
+    /// </summary>
     private void Turn()
     {
         //if (moveDir == Vector2.up)
@@ -170,7 +223,10 @@ public class C_EnemyController : MonoBehaviour
         moveDir = -moveDir;
     }
 
-    //視野判定
+    /// <summary>
+    /// 視野判定
+    /// </summary>
+    /// <returns></returns>
     private bool IsVisible()
     {
         Vector2 selfPos = rb.position;
@@ -186,7 +242,9 @@ public class C_EnemyController : MonoBehaviour
         return innerProduct > cosHalf && targetDistance < sightMaxDistance && !C_GManager.instance.isHide && !C_GManager.instance.isGameClear && !C_GManager.instance.isGameOver;
     }
 
-    //追跡処理
+    /// <summary>
+    /// 追跡処理
+    /// </summary>
     private void Chase()
     {
         if (IsVisible())
@@ -197,10 +255,14 @@ public class C_EnemyController : MonoBehaviour
         else
         {
             isChase = false;
-            isWait = true;
+            rb.velocity = Vector2.zero;
+            StartCoroutine(Miss());
         }
     }
 
+    /// <summary>
+    /// 移動範囲制限
+    /// </summary>
     private void LimitMove()
     {
         Vector2 currentPos = rb.position;
@@ -212,9 +274,12 @@ public class C_EnemyController : MonoBehaviour
     }
 
 
-    //衝突処理
+    /// <summary>
+    /// 衝突処理
+    /// </summary>
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == playerTag)
         {
             if (!C_GManager.instance.isGameClear)
@@ -225,5 +290,29 @@ public class C_EnemyController : MonoBehaviour
             else
                 Turn();
         }
+    }
+
+    /// <summary>
+    /// 発見後に一定時間待機
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator Finded()
+    {
+        findedText.SetActive(true);
+        yield return new WaitForSeconds(beforeChaseTime);
+        findedText.SetActive(false);
+        isChase = true;
+    }
+
+    /// <summary>
+    /// 見失った後に一定時間待機
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator Miss()
+    {
+        missText.SetActive(true);
+        yield return new WaitForSeconds(afterChaseTime);
+        missText.SetActive(false);
+        isWait = true;
     }
 }
