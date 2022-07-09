@@ -16,9 +16,11 @@ public class Nesy_Fungus : MonoBehaviour
         
     }
     public Fungus.Flowchart flowchart = null;
+    [SerializeField]
+    private string Message;
     public void StartFungus()
     {
-        flowchart.SendFungusMessage("Start");
+        flowchart.SendFungusMessage(Message);
         Debug.Log("ee");
     }
 }
