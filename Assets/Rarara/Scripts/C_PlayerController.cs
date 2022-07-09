@@ -29,7 +29,7 @@ public class C_PlayerController : MonoBehaviour
     {
         Directer();
         Move();
-        Animation();
+        if (playerdirection != Vector2.zero) Animation();
         LimitMove();
     }
 
@@ -98,6 +98,7 @@ public class C_PlayerController : MonoBehaviour
         else if (collision.gameObject.tag == hideTag)
         {
             C_GManager.instance.isHide = true;
+            C_StageManager.instance.InHide();
         }
         else if (collision.gameObject.tag == enemyTag)
         {
@@ -114,6 +115,7 @@ public class C_PlayerController : MonoBehaviour
         if(collision.gameObject.tag == hideTag)
         {
             C_GManager.instance.isHide = false;
+            C_StageManager.instance.OutHide();
         }
     }
 }
