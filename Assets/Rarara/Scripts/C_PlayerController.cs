@@ -50,25 +50,31 @@ public class C_PlayerController : MonoBehaviour
 
     private void Animation()
     {
-        if (playerdirection.x == 0 && playerdirection.y == -1)
+        if (Mathf.Abs(playerdirection.x) <= Mathf.Abs(playerdirection.y))
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", -1f);
+            if (playerdirection.y >= 0)
+            {
+                anim.SetFloat("X", 0);
+                anim.SetFloat("Y", 1f);
+            }
+            else
+            {
+                anim.SetFloat("X", 0);
+                anim.SetFloat("Y", -1f);
+            }
         }
-        if (playerdirection.x == 0 && playerdirection.y == 1)
+        else
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", 1f);//back
-        }
-        if (playerdirection.x == -1 && playerdirection.y == 0)
-        {
-            anim.SetFloat("X", -1f);
-            anim.SetFloat("Y", 0);//left
-        }
-        if (playerdirection.x == 1 && playerdirection.y == 0)
-        {
-            anim.SetFloat("X", 1f);
-            anim.SetFloat("Y", 0);//right
+            if (playerdirection.x >= 0)
+            {
+                anim.SetFloat("X", 1f);
+                anim.SetFloat("Y", 0);
+            }
+            else
+            {
+                anim.SetFloat("X", -1f);
+                anim.SetFloat("Y", 0);
+            }
         }
     }
 
@@ -93,6 +99,14 @@ public class C_PlayerController : MonoBehaviour
         {
             C_GManager.instance.isHide = true;
         }
+        else if (collision.gameObject.tag == enemyTag)
+        {
+            if (!C_GManager.instance.isGameClear)
+            {
+                C_GManager.instance.isGameOver = true;
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -100,18 +114,6 @@ public class C_PlayerController : MonoBehaviour
         if(collision.gameObject.tag == hideTag)
         {
             C_GManager.instance.isHide = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == enemyTag)
-        {
-            if (!C_GManager.instance.isGameClear)
-            {
-                C_GManager.instance.isGameOver = true;
-                this.gameObject.SetActive(false);
-            }
         }
     }
 }
