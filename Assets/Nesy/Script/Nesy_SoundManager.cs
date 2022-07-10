@@ -37,10 +37,18 @@ public class Nesy_SoundManager : MonoBehaviour
     private AudioSource source;
     [SerializeField]
     private AudioClip clip;
+    [SerializeField]
+    private float Volume;
 
     public void Clip()
     {
         source.PlayOneShot(clip);
+        Debug.Log(source);
+    }
+
+    public void SEvolume()
+    {
+        source.volume = Volume;
     }
 
 
