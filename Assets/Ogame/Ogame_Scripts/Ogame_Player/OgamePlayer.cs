@@ -7,17 +7,20 @@ public class OgamePlayer : MonoBehaviour
 {
     public byte life;
 
-    public Vector2 playerdirection;
+    [SerializeField] private Vector2 playerdirection;
     private byte dir;
     private bool playPermission = true;
 
-    public GameObject attackPoint;
-    public float speed;
+    [SerializeField] private GameObject attackPoint;
+    [SerializeField] private float speed;
 
     private bool isCalledOnce = false;
     private GameObject at;
 
-    public Rigidbody2D rb2d;//自分のリジッドボディを取得する
+    [SerializeField, Tooltip("Player-animation")]
+    private Animator anim;
+
+    [SerializeField] private Rigidbody2D rb2d;//自分のリジッドボディを取得する
 
 
     //UI関係
@@ -39,6 +42,7 @@ public class OgamePlayer : MonoBehaviour
         Directer();
         Attack();
         HPScore();
+        Animation();
     }
 
     void Attack()
@@ -98,6 +102,29 @@ public class OgamePlayer : MonoBehaviour
         if (playerdirection.x == 1 && playerdirection.y == 0)
         {
             dir = 3; //right
+        }
+    }
+    public void Animation()
+    {
+        if (playerdirection.x == 0 && playerdirection.y == -1)
+        {
+            anim.SetFloat("X", 0);
+            anim.SetFloat("Y", -1f);//front
+        }
+        if (playerdirection.x == 0 && playerdirection.y == 1)
+        {
+            anim.SetFloat("X", 0);
+            anim.SetFloat("Y", 1f);//back
+        }
+        if (playerdirection.x == -1 && playerdirection.y == 0)
+        {
+            anim.SetFloat("X", -1f);
+            anim.SetFloat("Y", 0);//left
+        }
+        if (playerdirection.x == 1 && playerdirection.y == 0)
+        {
+            anim.SetFloat("X", 1f);
+            anim.SetFloat("Y", 0);//right
         }
     }
 
