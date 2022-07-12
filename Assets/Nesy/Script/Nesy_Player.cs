@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Nesy_Player : MonoBehaviour
 {
@@ -13,10 +14,14 @@ public class Nesy_Player : MonoBehaviour
     [SerializeField, Tooltip("移動スピード")]
     private int speed;//自分の移動スピードを取得する
 
+
     public Rigidbody2D rb2d;//自分のリジッドボディを取得する
 
     [SerializeField, Tooltip("Player-animation")]
     private Animator anim;
+
+    [SerializeField]
+    private Animator Arukianim; 
 
     [SerializeField, Tooltip("キーボード入力のオンオフ")]
     public bool onoff;
@@ -34,9 +39,9 @@ public class Nesy_Player : MonoBehaviour
         {
             Move();
         }
-        Animation();
 
         Directer();
+        Animation();
 
     }
 
@@ -45,23 +50,23 @@ public class Nesy_Player : MonoBehaviour
     {
         if (playerdirection.x == 0 && playerdirection.y == -1)
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", -1f);
+            Arukianim.SetFloat("X", 0);
+            Arukianim.SetFloat("Y", -1f);
         }
         if (playerdirection.x == 0 && playerdirection.y == 1)
         {
-            anim.SetFloat("X", 0);
-            anim.SetFloat("Y", 1f);//back
+            Arukianim.SetFloat("X", 0);
+            Arukianim.SetFloat("Y", 1f);//back
         }
         if (playerdirection.x == -1 && playerdirection.y == 0)
         {
-            anim.SetFloat("X", -1f);
-            anim.SetFloat("Y", 0);//left
+            Arukianim.SetFloat("X", -1f);
+            Arukianim.SetFloat("Y", 0);//left
         }
         if (playerdirection.x == 1 && playerdirection.y == 0)
         {
-            anim.SetFloat("X", 1f);
-            anim.SetFloat("Y", 0);//right
+            Arukianim.SetFloat("X", 1f);
+            Arukianim.SetFloat("Y", 0);//right
         }
     }
 
