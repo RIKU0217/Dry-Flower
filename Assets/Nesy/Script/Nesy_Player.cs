@@ -20,11 +20,9 @@ public class Nesy_Player : MonoBehaviour
     [SerializeField, Tooltip("Player-animation")]
     private Animator anim;
 
-    [SerializeField]
-    private Animator Arukianim; 
-
     [SerializeField, Tooltip("キーボード入力のオンオフ")]
     public bool onoff;
+
 
     void Start()
     {
@@ -50,47 +48,53 @@ public class Nesy_Player : MonoBehaviour
     {
         if (playerdirection.x == 0 && playerdirection.y == -1)
         {
-            Arukianim.SetFloat("X", 0);
-            Arukianim.SetFloat("Y", -1f);
+            anim.SetFloat("X", 0);
+            anim.SetFloat("Y", -1f);
         }
         if (playerdirection.x == 0 && playerdirection.y == 1)
         {
-            Arukianim.SetFloat("X", 0);
-            Arukianim.SetFloat("Y", 1f);//back
+            anim.SetFloat("X", 0);
+            anim.SetFloat("Y", 1f);//back
         }
         if (playerdirection.x == -1 && playerdirection.y == 0)
         {
-            Arukianim.SetFloat("X", -1f);
-            Arukianim.SetFloat("Y", 0);//left
+            anim.SetFloat("X", -1f);
+            anim.SetFloat("Y", 0);//left
         }
         if (playerdirection.x == 1 && playerdirection.y == 0)
         {
-            Arukianim.SetFloat("X", 1f);
-            Arukianim.SetFloat("Y", 0);//right
+            anim.SetFloat("X", 1f);
+            anim.SetFloat("Y", 0);//right
         }
     }
 
     public void FrontAnim()
     {
-        anim.SetFloat("X", 0);
-        anim.SetFloat("Y", -1f);
+        spriteRenderer.sprite = sprites[0];
     }
     public void BackAnim()
     {
-        anim.SetFloat("X", 0);
-        anim.SetFloat("Y", 1f);//back
+        spriteRenderer.sprite = sprites[1];//back
     }
     public void RightAnim()
     {
-        anim.SetFloat("X", 1f);
-        anim.SetFloat("Y", 0);//right
+        spriteRenderer.sprite = sprites[2];//right
     }
     public void LeftAnim()
     {
-        anim.SetFloat("X", -1f);
-        anim.SetFloat("Y", 0);//left
+        spriteRenderer.sprite = sprites[3];//left
     }
 
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private Sprite[] sprites;
+
+    public void FSprite()
+    {
+        spriteRenderer.sprite = sprites[0];
+    }
 
 
 
