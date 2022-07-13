@@ -22,8 +22,8 @@ public class C_EnemyBase : MonoBehaviour
     protected bool isPatrol = false; //巡回中ならtrue
     protected bool isChase = false; //追跡中ならtrue
     protected Vector2 moveDir; //進行方向
-    private Vector2 areaMin; //移動可能範囲
-    private Vector2 areaMax;
+    //private Vector2 areaMin; //移動可能範囲
+    //private Vector2 areaMax;
     private string playerTag = "Player"; //プレイヤータグ
     protected float toTargetDistance;
 
@@ -62,8 +62,8 @@ public class C_EnemyBase : MonoBehaviour
         Animate();
         colXHalf = col.size.x / 2;
         colYHalf = col.size.y / 2;
-        areaMin = new Vector2(C_StageManager.instance.area.bounds.min.x, C_StageManager.instance.area.bounds.min.y);
-        areaMax = new Vector2(C_StageManager.instance.area.bounds.max.x, C_StageManager.instance.area.bounds.max.y);
+        //areaMin = new Vector2(C_StageManager.instance.area.bounds.min.x, C_StageManager.instance.area.bounds.min.y);
+        //areaMax = new Vector2(C_StageManager.instance.area.bounds.max.x, C_StageManager.instance.area.bounds.max.y);
     }
 
     protected virtual void FixedUpdate()
@@ -72,7 +72,7 @@ public class C_EnemyBase : MonoBehaviour
         else if (isPatrol) Patrol();
         else if (isChase) Chase();
 
-        LimitMove();
+        //LimitMove();
     }
 
     /// <summary>
@@ -167,9 +167,9 @@ public class C_EnemyBase : MonoBehaviour
     /// </summary>
     protected void Patrol()
     {
-        if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) 
-            || (rb.position.y < areaMin.y + colYHalf) || (rb.position.y > areaMax.y - colYHalf))
-            Turn();
+        //if ((rb.position.x < areaMin.x + colXHalf) || (rb.position.x > areaMax.x - colXHalf) 
+        //    || (rb.position.y < areaMin.y + colYHalf) || (rb.position.y > areaMax.y - colYHalf))
+        //    Turn();
 
         if (moveTime > timeCounter)
         {
@@ -256,15 +256,15 @@ public class C_EnemyBase : MonoBehaviour
     /// <summary>
     /// 移動範囲制限
     /// </summary>
-    protected void LimitMove()
-    {
-        Vector2 currentPos = rb.position;
+    //protected void LimitMove()
+    //{
+    //    Vector2 currentPos = rb.position;
 
-        currentPos.x = Mathf.Clamp(currentPos.x, areaMin.x + colXHalf, areaMax.x - colXHalf);
-        currentPos.y = Mathf.Clamp(currentPos.y, areaMin.y + colYHalf, areaMax.y - colYHalf);
+    //    currentPos.x = Mathf.Clamp(currentPos.x, areaMin.x + colXHalf, areaMax.x - colXHalf);
+    //    currentPos.y = Mathf.Clamp(currentPos.y, areaMin.y + colYHalf, areaMax.y - colYHalf);
 
-        rb.position = currentPos;
-    }
+    //    rb.position = currentPos;
+    //}
 
 
     /// <summary>
@@ -281,6 +281,13 @@ public class C_EnemyBase : MonoBehaviour
             }
             else
                 Turn();
+        }
+        else
+        {
+            if (!isChase)
+            {
+                Turn();
+            }
         }
     }
 

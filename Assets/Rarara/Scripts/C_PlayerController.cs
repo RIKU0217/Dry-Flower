@@ -11,18 +11,18 @@ public class C_PlayerController : MonoBehaviour
     private string goalTag = "Goal";
     private string enemyTag = "Enemy";
 
-    private BoxCollider2D area; //ˆÚ“®‰Â”\”ÍˆÍ
+    //private BoxCollider2D area; //ˆÚ“®‰Â”\”ÍˆÍ
     private Rigidbody2D rb;
-    private BoxCollider2D col;
+    //private BoxCollider2D col;
     private Animator anim;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
+        //col = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
-        area = C_StageManager.instance.area;
+        //area = C_StageManager.instance.area;
     }
 
     void FixedUpdate()
@@ -30,7 +30,7 @@ public class C_PlayerController : MonoBehaviour
         Directer();
         Move();
         if (playerdirection != Vector2.zero) Animation();
-        LimitMove();
+        //LimitMove();
     }
 
     private void Directer()
@@ -78,15 +78,15 @@ public class C_PlayerController : MonoBehaviour
         }
     }
 
-    private void LimitMove()
-    {
-        Vector2 currentPos = rb.position;
+    //private void LimitMove()
+    //{
+    //    Vector2 currentPos = rb.position;
 
-        currentPos.x = Mathf.Clamp(currentPos.x, area.bounds.min.x + col.size.x / 2, area.bounds.max.x - col.size.x / 2);
-        currentPos.y = Mathf.Clamp(currentPos.y, area.bounds.min.y + col.size.y / 2, area.bounds.max.y - col.size.y / 2);
+    //    currentPos.x = Mathf.Clamp(currentPos.x, area.bounds.min.x + col.size.x / 2, area.bounds.max.x - col.size.x / 2);
+    //    currentPos.y = Mathf.Clamp(currentPos.y, area.bounds.min.y + col.size.y / 2, area.bounds.max.y - col.size.y / 2);
 
-        rb.position = currentPos;
-    }
+    //    rb.position = currentPos;
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -100,7 +100,7 @@ public class C_PlayerController : MonoBehaviour
             C_GManager.instance.isHide = true;
             C_StageManager.instance.InHide();
         }
-        else if (collision.gameObject.tag == enemyTag)
+        else if(collision.gameObject.tag == enemyTag)
         {
             if (!C_GManager.instance.isGameClear)
             {
@@ -112,10 +112,22 @@ public class C_PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == hideTag)
+        if (collision.gameObject.tag == hideTag)
         {
             C_GManager.instance.isHide = false;
             C_StageManager.instance.OutHide();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == enemyTag)
+        {
+            if (!C_GManager.instance.isGameClear)
+            {
+                C_GManager.instance.isGameOver = true;
+                this.gameObject.SetActive(false);
+            }
         }
     }
 }

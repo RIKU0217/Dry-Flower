@@ -78,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -941871846, guid: 8407667066366764b88e9a4c123f638a, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 874979351, guid: 7e087b75c59828f459a5f5198515bb4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179298358918501623}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -121,14 +121,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160,14 +160,16 @@ MonoBehaviour:
   notPatrol: 0
   findedText: {fileID: 5346693605148361084}
   missedText: {fileID: 4780584059227432956}
-  initDir: 3
-  bulletOb: {fileID: 5044873320474585086, guid: 96977eb3cef87614b871df5f75b17427, type: 3}
+  initDir: 1
+  bulletOb: {fileID: 5044873320474585086, guid: 96977eb3cef87614b871df5f75b17427,
+    type: 3}
   bulletSpeed: 3
   startShootDis: 4
   beforeShootTime: 1
   afterShootTime: 1
   bulletNumbers: 1
   bulletLifeTime: 5
+  bulletDuration: 0.2
 --- !u!95 &8518586572294943893
 Animator:
   serializedVersion: 4
@@ -178,7 +180,7 @@ Animator:
   m_GameObject: {fileID: 179298358918501623}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a307513044da3964bb68e965d7fb494f, type: 2}
+  m_Controller: {fileID: 9100000, guid: d56e457236c53ce44925043c3bfe4720, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -223,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.8999939}
+  m_AnchoredPosition: {x: 0, y: 1.06}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &972700464237983039
@@ -266,7 +268,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8251037752192566011
 MonoBehaviour:
@@ -395,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.8999939}
+  m_AnchoredPosition: {x: 0, y: 1.06}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4487058696776706505
@@ -438,7 +440,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3378397030275450389
 MonoBehaviour:

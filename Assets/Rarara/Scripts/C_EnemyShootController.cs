@@ -71,7 +71,7 @@ public class C_EnemyShootController : C_EnemyBase
         {
             if(bulNum != 0 && bulletTimer > bulletDuration)
             {
-                GameObject bul = Instantiate(bulletOb, this.transform.position, Quaternion.Euler(0, 0, Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg + 90f));
+                GameObject bul = Instantiate(bulletOb, this.transform.position + new Vector3(moveDir.x,moveDir.y,0), Quaternion.Euler(0, 0, Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg + 90f));
                 bul.GetComponent<C_EnemyBullet>().lifeTime = bulletLifeTime;
                 bul.GetComponent<Rigidbody2D>().velocity = moveDir * bulletSpeed;
                 bulNum--;
