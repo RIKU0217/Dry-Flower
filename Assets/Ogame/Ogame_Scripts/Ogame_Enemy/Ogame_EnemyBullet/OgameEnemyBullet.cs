@@ -13,7 +13,7 @@ public class OgameEnemyBullet : MonoBehaviour
 
     void Start()
     {
-        vT = -v;
+        vT = v;
     }
 
     void Update()

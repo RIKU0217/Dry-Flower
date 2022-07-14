@@ -24,12 +24,12 @@ public class OgamePlayer : MonoBehaviour
 
 
     //UIŠÖŒW
-    TextMeshProUGUI hPScore;
+    //TextMeshProUGUI hPScore;
 
     void Start()
     {
         life = 6;
-        hPScore = GameObject.Find("HPScore").GetComponent<TextMeshProUGUI>();
+        //hPScore = GameObject.Find("HPScore").GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
@@ -41,7 +41,7 @@ public class OgamePlayer : MonoBehaviour
         MoveClamp();
         Directer();
         Attack();
-        HPScore();
+        //HPScore();
         Animation();
     }
 
@@ -51,7 +51,7 @@ public class OgamePlayer : MonoBehaviour
         float[] attackY = { -0.8f, 0.8f, 0, 0 };
         float[] attackR = { 0, 0, 90f, 90f };
 
-        if (Input.GetKey(KeyCode.Z) & isCalledOnce == false)
+        if (Input.GetKey(KeyCode.Space) & isCalledOnce == false)
         {
             at = Instantiate(attackPoint, new Vector3(transform.position.x + attackX[dir], transform.position.y + attackY[dir], 0),
                                                                 Quaternion.Euler(0, 0, attackR[dir]), this.transform);
@@ -79,7 +79,7 @@ public class OgamePlayer : MonoBehaviour
 
     void MoveClamp()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8.4f, 8.4f), Mathf.Clamp(transform.position.y, -4.5f, 4.5f), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10f, 6.7f), Mathf.Clamp(transform.position.y, -4.5f, 3.75f), 0);
     }
 
     void Directer()
@@ -130,33 +130,34 @@ public class OgamePlayer : MonoBehaviour
 
     private void HPScore()
     {
-        hPScore.SetText("HP : {0}", life / 2);
+        //hPScore.SetText("HP : {0}", life / 2);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EnemyAttackPoint"))
         {
-            if (life != 1)
+            if (life > 2)
             {
-                life -= 1;
+                life -= 2;
             }
             else
             {
                 life = 0;
-                Time.timeScale = 0;
+                C_GManager.instance.isGameOver = true;
             }
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
-            if (life != 1)
+            if (life > 1)
             {
                 life -= 1;
             }
             else
             {
                 life = 0;
-                Time.timeScale = 0;
+                C_GManager.instance.isGameOver = true;
             }
             Destroy(other.gameObject);
         }

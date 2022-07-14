@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ogame.System;
 
 public class OgameEnemyStraightAttack : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
 
     public float v;
     public float mrd;
@@ -20,25 +22,29 @@ public class OgameEnemyStraightAttack : MonoBehaviour
 
     void Start()
     {
+        shootTimer = 1f;
         player = GameObject.Find("Player");
-        vT = -v;
+        vT = v;
+        Directer();
     }
 
     void Update()
     {
-        Directer();
         float distance = Vector3.Distance(this.transform.position, player.transform.position);
         if (distance >= 1.2f)
         {
             float rd = mrd;
+            Animation(rd);
+            //Animation(ClassA.Direction(rd));
 
-            vX = vT * Mathf.Sin(rd * Mathf.Deg2Rad);
-            vY = vT * Mathf.Cos(rd * Mathf.Deg2Rad);
+            vX = vT * Mathf.Cos(rd * Mathf.Deg2Rad);
+            vY = vT * Mathf.Sin(rd * Mathf.Deg2Rad);
 
             transform.position += new Vector3(vX, vY) * Time.deltaTime;
         }
         else
         {
+            Animation(FindToPlayerDeg(this.transform.position));
             if (shootTimer <= 0)
             {
                 SwordAttack();
@@ -90,5 +96,11 @@ public class OgameEnemyStraightAttack : MonoBehaviour
         float deg = Mathf.Atan2(dt.y, dt.x) * Mathf.Rad2Deg;
 
         return deg;
+    }
+    private void Animation(float rd)
+    {
+        float[] temp = ClassA.Direction(rd);
+        anim.SetFloat("X", temp[0]);
+        anim.SetFloat("Y", temp[1]);
     }
 }
