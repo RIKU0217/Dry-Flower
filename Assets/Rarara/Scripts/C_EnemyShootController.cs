@@ -60,14 +60,14 @@ public class C_EnemyShootController : C_EnemyBase
         moveDir = (target.position - rb.position).normalized;
         Animate();
         shootTimer += Time.deltaTime;
-        if(shootTimer > beforeShootTime + afterShootTime)
+        if(shootTimer > beforeShootTime + afterShootTime || !IsVisible())
         {
             isShoot = false;
             isChase = true;
             shootTimer = 0f;
             bulletTimer = 0f;
         }
-        else if(shootTimer > beforeShootTime)
+        else if(shootTimer > beforeShootTime )
         {
             if(bulNum != 0 && bulletTimer > bulletDuration)
             {

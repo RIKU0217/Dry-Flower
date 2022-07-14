@@ -10,6 +10,7 @@ public class C_GManager : MonoBehaviour
     [HideInInspector] public bool isGameClear;
     [HideInInspector] public bool isGameOver;
 
+    private string nextSceneNama = "Matsuri_chiguri_scene";
     private bool callOnce;
 
     private void Awake()
@@ -29,7 +30,7 @@ public class C_GManager : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Return))
             {
-                SceneManager.LoadScene("Chiguri");
+                SceneManager.LoadScene(nextSceneNama);
                 callOnce=false;
                 isGameClear=false;
             }

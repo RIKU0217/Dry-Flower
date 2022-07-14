@@ -4,33 +4,47 @@ public class C_PlayerController : MonoBehaviour
 {
     [SerializeField] private int speed;//移動スピード
     [SerializeField, Tooltip("キーボード入力のオンオフ")] public bool enableKeyboard;
+    public CapsuleCollider2D col;
+    public float animSpeed = 2f;
+
+
+    [HideInInspector] public bool bodyCheck;
+    [HideInInspector] public bool footCheck;
+    private bool callOnce;
 
     private Vector2 playerdirection; //移動方向
 
-    private string hideTag = "Bush";
     private string goalTag = "Goal";
     private string enemyTag = "Enemy";
 
-    //private BoxCollider2D area; //移動可能範囲
+    private BoxCollider2D area; //移動可能範囲
     private Rigidbody2D rb;
-    //private BoxCollider2D col;
     private Animator anim;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //col = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
-        //area = C_StageManager.instance.area;
+        area = C_StageManager.instance.area;
     }
 
     void FixedUpdate()
     {
         Directer();
         Move();
-        if (playerdirection != Vector2.zero) Animation();
-        //LimitMove();
+        if(playerdirection != Vector2.zero)
+        {
+            anim.speed = speed/2;
+            Animation();
+        }
+        else
+        {
+            anim.Play(anim.GetCurrentAnimatorStateInfo(0).shortNameHash, 0, 0);
+            anim.speed = 0f;
+        }
+        LimitMove();
+        HideCheck();
     }
 
     private void Directer()
@@ -78,15 +92,37 @@ public class C_PlayerController : MonoBehaviour
         }
     }
 
-    //private void LimitMove()
-    //{
-    //    Vector2 currentPos = rb.position;
+    private void LimitMove()
+    {
+        Vector2 currentPos = rb.position;
 
-    //    currentPos.x = Mathf.Clamp(currentPos.x, area.bounds.min.x + col.size.x / 2, area.bounds.max.x - col.size.x / 2);
-    //    currentPos.y = Mathf.Clamp(currentPos.y, area.bounds.min.y + col.size.y / 2, area.bounds.max.y - col.size.y / 2);
+        currentPos.x = Mathf.Clamp(currentPos.x, area.bounds.min.x + col.size.x / 2, area.bounds.max.x - col.size.x / 2);
+        currentPos.y = Mathf.Clamp(currentPos.y, area.bounds.min.y + col.size.y / 2, area.bounds.max.y - col.size.y / 2);
 
-    //    rb.position = currentPos;
-    //}
+        rb.position = currentPos;
+    }
+
+    private void HideCheck()
+    {
+        if(bodyCheck && footCheck)
+        {
+            if (!callOnce)
+            {
+                C_GManager.instance.isHide = true;
+                C_StageManager.instance.InHide();
+                callOnce = true;
+            }
+        }
+        else
+        {
+            if (callOnce)
+            {
+                C_GManager.instance.isHide = false;
+                C_StageManager.instance.OutHide();
+                callOnce = false;
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -95,11 +131,6 @@ public class C_PlayerController : MonoBehaviour
             C_GManager.instance.isGameClear = true;
             enableKeyboard = false;
         }
-        else if (collision.gameObject.tag == hideTag)
-        {
-            C_GManager.instance.isHide = true;
-            C_StageManager.instance.InHide();
-        }
         else if(collision.gameObject.tag == enemyTag)
         {
             if (!C_GManager.instance.isGameClear)
@@ -107,15 +138,6 @@ public class C_PlayerController : MonoBehaviour
                 C_GManager.instance.isGameOver = true;
                 this.gameObject.SetActive(false);
             }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == hideTag)
-        {
-            C_GManager.instance.isHide = false;
-            C_StageManager.instance.OutHide();
         }
     }
 

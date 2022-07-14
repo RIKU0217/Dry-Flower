@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ogame.System;
 
 public class OgameEnemyChaseAttack : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
 
     public float v;
 
@@ -30,6 +32,7 @@ public class OgameEnemyChaseAttack : MonoBehaviour
         if (distance >= 1.2f)
         {
             float rd = FindToPlayerDeg(this.transform.position);
+            Animation(rd);
 
             vX = vT * Mathf.Cos(rd * Mathf.Deg2Rad);
             vY = vT * Mathf.Sin(rd * Mathf.Deg2Rad);
@@ -38,6 +41,7 @@ public class OgameEnemyChaseAttack : MonoBehaviour
         }
         else
         {
+            Animation(FindToPlayerDeg(this.transform.position));
             if (shootTimer <= 0)
             {
                 SwordAttack();
@@ -89,5 +93,11 @@ public class OgameEnemyChaseAttack : MonoBehaviour
         float deg = Mathf.Atan2(dt.y, dt.x) * Mathf.Rad2Deg;
 
         return deg;
+    }
+    private void Animation(float rd)
+    {
+        float[] temp = ClassA.Direction(rd);
+        anim.SetFloat("X", temp[0]);
+        anim.SetFloat("Y", temp[1]);
     }
 }
