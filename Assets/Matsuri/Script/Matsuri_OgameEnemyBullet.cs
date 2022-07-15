@@ -33,9 +33,18 @@ public class Matsuri_OgameEnemyBullet : MonoBehaviour
     //        Destroy(this.gameObject);
     //    }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        Destroy(this.gameObject);
-        Debug.Log("nessi");
+        Debug.Log("wawawa");
+        if (col.gameObject.tag != "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
+        
+
+        //if(col.gameObject.tag == "Player")
+        //{
+        //    C_GManager.instance.isGameOver = true;
+        //}
     }
 }

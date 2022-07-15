@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8780703642060096246}
   - component: {fileID: -1746132736897274101}
   - component: {fileID: 6771436755671294251}
+  - component: {fileID: 6668776101271621317}
   m_Layer: 0
-  m_Name: Matsuri_OgameEnemy06
+  m_Name: Matsuri_MurasakiEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +112,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8780703642060096244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -132,4 +133,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5c977d43961f14ab962a669e2599c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5044873320474585086, guid: 0fb0f9b313aa2064f84b08c05924252e, type: 3}
+  anim: {fileID: 6668776101271621317}
+  bullet: {fileID: 5044873320474585086, guid: 61c1e07a3a5cc7449aba4605911e4894, type: 3}
+--- !u!95 &6668776101271621317
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780703642060096244}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60a5552e8e800e84e90c62183a23f650, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
