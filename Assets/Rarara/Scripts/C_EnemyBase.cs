@@ -33,6 +33,7 @@ public class C_EnemyBase : MonoBehaviour
     private Animator anim;
     [SerializeField, Tooltip("発見時に表示するテキスト")] private GameObject findedText;
     [SerializeField, Tooltip("見失った時に表示するテキスト")] private GameObject missedText;
+    [SerializeField, Tooltip("最初に向く方向")] private InitDir initDir;
 
     private enum InitDir
     {
@@ -42,7 +43,6 @@ public class C_EnemyBase : MonoBehaviour
         right,
     }
 
-    [SerializeField, Tooltip("最初に向く方向")] private InitDir initDir;
 
     Dictionary<string, Vector2> udlr = new Dictionary<string, Vector2>() 
     {
@@ -54,10 +54,13 @@ public class C_EnemyBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        //コンポーネント取得
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
+
+        //初期設定
         moveDir = udlr[initDir.ToString()];
         Animate();
         colXHalf = col.size.x / 2;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class C_PlayerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class C_PlayerController : MonoBehaviour
 
     private string goalTag = "Goal";
     private string enemyTag = "Enemy";
+    private string wallTag = "Wood";
 
     private BoxCollider2D area; //ˆÚ“®‰Â”\”ÍˆÍ
     private Rigidbody2D rb;
@@ -152,4 +154,15 @@ public class C_PlayerController : MonoBehaviour
             }
         }
     }
+
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.tag == wallTag)
+    //    {
+    //        if (Input.GetKey(KeyCode.Return))
+    //        {
+    //            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //        }
+    //    }
+    //}
 }

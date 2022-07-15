@@ -6,11 +6,11 @@ public class C_GManager : MonoBehaviour
 {
     public static C_GManager instance = null;
 
-    [HideInInspector] public bool isHide;
-    [HideInInspector] public bool isGameClear;
-    [HideInInspector] public bool isGameOver;
+    [HideInInspector] public bool isHide = false;
+    [HideInInspector] public bool isGameClear = false;
+    [HideInInspector] public bool isGameOver = false;
 
-    private string nextSceneNama = "Matsuri_chiguri_scene";
+    private string nextSceneNama = "Chiguri"; //éüÇÃÉVÅ[Éìñº
     private bool callOnce;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class C_GManager : MonoBehaviour
 
     private void Update()
     {
-        if (isGameClear)
+        if (isGameClear && C_BGM.instance.compVolFadeOut)
         {
             if (!callOnce)
             {
