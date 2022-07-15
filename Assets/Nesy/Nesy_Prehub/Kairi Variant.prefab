@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 2517173275176152297}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Sprite
@@ -16,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 974085637240844362, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Name
-      value: Kairi
+      value: Kairi Variant
       objectReference: {fileID: 0}
     - target: {fileID: 974085637240844362, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
@@ -85,3 +95,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e0768a135b964e87a6b6ae626aa5b, type: 3}
+--- !u!212 &2517173275176152297 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3416664730003561632}
+  m_PrefabAsset: {fileID: 0}

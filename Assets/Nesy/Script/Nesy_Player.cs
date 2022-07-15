@@ -26,8 +26,8 @@ public class Nesy_Player : MonoBehaviour
 
     void Start()
     {
-        playerdirection.x = 0;
-        playerdirection.y = 1;
+        //playerdirection.x = 0;
+        //playerdirection.y = 1;
     }
 
     // Update is called once per frame
@@ -36,10 +36,11 @@ public class Nesy_Player : MonoBehaviour
         if (onoff == true)
         {
             Move();
+            Animation();
         }
 
         Directer();
-        Animation();
+        
 
     }
 
@@ -68,6 +69,32 @@ public class Nesy_Player : MonoBehaviour
         }
     }
 
+    public void HokouFront()
+    {
+        anim.SetFloat("X", 0);
+        anim.SetFloat("Y", -1f);
+    }
+    public void HokouBack()
+    {
+        anim.SetFloat("X", 0);
+        anim.SetFloat("Y", 1f);
+        Debug.Log("jdej");
+    }
+    public void HokouLeft()
+    {
+        anim.SetFloat("X", -1f);
+        anim.SetFloat("Y", 0);
+    }
+    public void HokouRight()
+    {
+        anim.SetFloat("X", 1f);
+        anim.SetFloat("Y", 0);
+    }
+
+    public void Stopanim()
+    {
+        anim.speed = 0;
+    }
     public void FrontAnim()
     {
         spriteRenderer.sprite = sprites[0];
@@ -75,6 +102,7 @@ public class Nesy_Player : MonoBehaviour
     public void BackAnim()
     {
         spriteRenderer.sprite = sprites[1];//back
+        Debug.Log("wei");
     }
     public void RightAnim()
     {
@@ -91,10 +119,16 @@ public class Nesy_Player : MonoBehaviour
     [SerializeField]
     private Sprite[] sprites;
 
-    public void FSprite()
+    [SerializeField]
+    private Vector2 transposi;
+
+    public void Trans()
     {
-        spriteRenderer.sprite = sprites[0];
+        this.transform.position = transposi;
     }
+        
+    
+
 
 
 
@@ -109,7 +143,7 @@ public class Nesy_Player : MonoBehaviour
         rb2d.velocity = playerdirection * speed;
     }
 
-   
+    
 
 
 
