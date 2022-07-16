@@ -20,7 +20,7 @@ public class Matsuri_GManager : MonoBehaviour
 
     private void Update()
     {
-        if (isGameClear)
+        if (isGameClear && Matsuri_BGM.instance.compVolFadeOut)
         {
             if (!callOnce)
             {
