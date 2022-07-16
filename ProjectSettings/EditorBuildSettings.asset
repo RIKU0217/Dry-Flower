@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Matsuri/Scenes/Matsuri_MainScene.unity
+    guid: e667ba8e1939b8949ba8c2c391e4c7b8
   m_configObjects: {}

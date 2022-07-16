@@ -23,6 +23,7 @@ public class Matsuri_OgamePlayer : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2d;//自分のリジッドボディを取得する
 
 
+
     //UI関係
     //TextMeshProUGUI hPScore;
 
@@ -38,6 +39,10 @@ public class Matsuri_OgamePlayer : MonoBehaviour
         {
             Move();
         }
+        else
+        {
+            rb2d.velocity = Vector2.zero;
+        }
         //MoveClamp();
         Directer();
         Attack();
@@ -51,7 +56,7 @@ public class Matsuri_OgamePlayer : MonoBehaviour
         float[] attackY = { -0.8f, 0.8f, 0, 0 };
         float[] attackR = { 0, 0, 90f, 90f };
 
-        if (Input.GetKey(KeyCode.Space) & isCalledOnce == false)
+        if (Input.GetKey(KeyCode.Space) & isCalledOnce == false && playPermission)
         {
             at = Instantiate(attackPoint, new Vector3(transform.position.x + attackX[dir], transform.position.y + attackY[dir], 0),
                                                                 Quaternion.Euler(0, 0, attackR[dir]), this.transform);
@@ -65,7 +70,8 @@ public class Matsuri_OgamePlayer : MonoBehaviour
     void DestroyAttackPoint()
     {
         Destroy(at);
-        playPermission = true;
+        if(!Matsuri_GManager.instance.isGameClear && !Matsuri_GManager.instance.isGameOver)
+            playPermission = true;
     }
     void CoolTimeReset()
     {
@@ -84,8 +90,9 @@ public class Matsuri_OgamePlayer : MonoBehaviour
 
     void Directer()
     {
-        //キーボードからの入力を格納
-        playerdirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if(playPermission)
+            //キーボードからの入力を格納
+            playerdirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         if (playerdirection.x == 0 && playerdirection.y == -1)
         {
@@ -137,7 +144,7 @@ public class Matsuri_OgamePlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EnemyAttackPoint"))
         {
-            C_GManager.instance.isGameOver = true;
+            Matsuri_GManager.instance.isGameOver = true;
             //if (life > 2)
             //{
             //    life -= 2;
@@ -148,10 +155,12 @@ public class Matsuri_OgamePlayer : MonoBehaviour
             //    C_GManager.instance.isGameOver = true;
             //}
             Destroy(other.gameObject);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            playPermission = false;
         }
-        if (other.gameObject.CompareTag("EnemyBullet"))
+        else if (other.gameObject.CompareTag("EnemyBullet"))
         {
-            C_GManager.instance.isGameOver = true;
+            Matsuri_GManager.instance.isGameOver = true;
             //if (life > 1)
             //{
             //    life -= 1;
@@ -162,6 +171,14 @@ public class Matsuri_OgamePlayer : MonoBehaviour
             //    C_GManager.instance.isGameOver = true;
             //}
             Destroy(other.gameObject);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            playPermission = false;
+        }
+        else if (other.gameObject.CompareTag("Goal"))
+        {
+            Matsuri_GManager.instance.isGameClear = true;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            playPermission = false;
         }
     }
 }

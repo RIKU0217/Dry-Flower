@@ -35,7 +35,6 @@ public class Matsuri_OgameEnemyBullet : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("wawawa");
         if (col.gameObject.tag != "Enemy")
         {
             Destroy(this.gameObject);
