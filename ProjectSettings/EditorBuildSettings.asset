@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Ogame/Ogame_Scenes/Ogame_KairiGame.unity
+    guid: ac663762597b1ec42b2c093a8a5139e4
+  - enabled: 1
+    path: Assets/Matsuri/Matsuri_Kairi_pacage/Matsuri_Kairi_scene.unity
+    guid: bab48275edbe68f4ea57a2165daf7477
   m_configObjects: {}

@@ -16,7 +16,7 @@ public class OgameEnemyStraightAttack : MonoBehaviour
     private float vX = 0f;
     private float vY = 0f;
     private float vT;
-    private byte dir;
+    [SerializeField] private byte dir;
 
     private GameObject player;
 
@@ -25,11 +25,11 @@ public class OgameEnemyStraightAttack : MonoBehaviour
         shootTimer = 1f;
         player = GameObject.Find("Player");
         vT = v;
-        Directer();
     }
 
     void Update()
     {
+        Directer();
         float distance = Vector3.Distance(this.transform.position, player.transform.position);
         if (distance >= 1.2f)
         {

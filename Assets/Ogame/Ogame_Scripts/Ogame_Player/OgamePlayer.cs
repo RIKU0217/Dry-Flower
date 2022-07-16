@@ -152,7 +152,7 @@ public class OgamePlayer : MonoBehaviour
         {
             if (life > 1)
             {
-                life -= 1;
+                life -= 2;
             }
             else
             {

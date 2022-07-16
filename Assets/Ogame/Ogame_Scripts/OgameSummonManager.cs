@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Ogame.System;
 
 public class OgameSummonManager : MonoBehaviour
@@ -12,15 +13,23 @@ public class OgameSummonManager : MonoBehaviour
     //bool isCalledOnce = false;
 
     private float summonTimer = 0;
+    private float summonInterval = 3f;
+    private int randomRange = 2;
+
+    private float gameTimer = 0;
+    private float clearTime = 60f;
 
     void Start()
     {
         summonTurn = true;
+        gameTimer = clearTime;
     }
 
     void Update()
     {
         Summon();
+        GameTimer();
+        Clear();
         /*if (Input.GetKeyDown(KeyCode.Z))
         {
             Vector3 t = new Vector2(Random.Range(-8f, 8f), 6f);
@@ -37,17 +46,18 @@ public class OgameSummonManager : MonoBehaviour
         {
             Vector3 t = new Vector3(0, 0, 0);
             byte random = 0;
+            Debug.Log((int)gameTimer);
 
             if (summonTurn)
             {
                 t = new Vector2(Random.Range(-9f, 7f), 5.5f);
-                random = (byte)Random.Range(0, 4);
+                random = (byte)Random.Range(0, randomRange);
                 summonTurn = false;
             }
             else if(!summonTurn)
             {
                 t = new Vector2(7.5f, Random.Range(-4.5f, 4f));
-                random = (byte)Random.Range(0, 4);
+                random = (byte)Random.Range(0, randomRange);
                 summonTurn = true;
             }
 
@@ -70,11 +80,36 @@ public class OgameSummonManager : MonoBehaviour
                     break;
             }
 
-            summonTimer = 6f;
+            summonTimer = summonInterval;
         }
         else
         {
             summonTimer -= Time.deltaTime;
+        }
+    }
+
+    private void GameTimer()
+    {
+        if (!C_GManager.instance.isGameOver)
+        {
+            gameTimer -= Time.deltaTime;
+        }
+        if (gameTimer < clearTime * 2 / 3 & gameTimer >= clearTime / 3)
+        {
+            randomRange = 4;
+            summonInterval = 2.5f;
+        }
+        else if (gameTimer < clearTime / 3)
+        {
+            summonInterval = 2f;
+        }
+    }
+
+    private void Clear()
+    {
+        if (gameTimer <= 0)
+        {
+            SceneManager.LoadScene("Ogame_KairiGame");
         }
     }
 
