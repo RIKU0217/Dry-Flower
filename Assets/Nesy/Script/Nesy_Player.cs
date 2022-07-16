@@ -91,9 +91,16 @@ public class Nesy_Player : MonoBehaviour
         anim.SetFloat("Y", 0);
     }
 
+    [SerializeField]
+    private float animspeed;
+    public void StartAnim()
+    {
+        anim.enabled = true;
+        Debug.Log(anim);
+    }
     public void Stopanim()
     {
-        anim.speed = 0;
+        anim.enabled = false;
     }
     public void FrontAnim()
     {
@@ -101,8 +108,8 @@ public class Nesy_Player : MonoBehaviour
     }
     public void BackAnim()
     {
-        spriteRenderer.sprite = sprites[1];//back
-        Debug.Log("wei");
+        this.spriteRenderer.sprite = sprites[1];//back
+        Debug.Log(sprites);
     }
     public void RightAnim()
     {

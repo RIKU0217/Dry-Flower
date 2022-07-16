@@ -67,6 +67,30 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ec3642a159003694bbea13565180572d, type: 2}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: eae8a5e9969e45346bcbfed13a6935e7,
+        type: 3}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5,
+        type: 3}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: eadd8c3e3ed834c45b0fc7711331d479,
+        type: 3}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 352aeae92b33dd347af61a27dce68001,
+        type: 3}
     - target: {fileID: 4592642067579517481, guid: 008c7604b05800a49917b789bb0f9425,
         type: 3}
       propertyPath: m_Sprite
@@ -76,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 4592642067579517482, guid: 008c7604b05800a49917b789bb0f9425,
         type: 3}
       propertyPath: m_Name
-      value: 'Gold_Mobu '
+      value: Paple_Mobu  Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 008c7604b05800a49917b789bb0f9425, type: 3}
