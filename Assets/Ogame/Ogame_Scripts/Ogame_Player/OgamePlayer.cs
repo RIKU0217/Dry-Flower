@@ -38,7 +38,7 @@ public class OgamePlayer : MonoBehaviour
         {
             Move();
         }
-        MoveClamp();
+        //MoveClamp();
         Directer();
         Attack();
         //HPScore();
