@@ -152,6 +152,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: faa68a2232f7c514bbb4c53683037b80, type: 2}
     - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
     - {fileID: 11400000, guid: 9eb7e034c8feb2f4caf0b9bd81813840, type: 2}
+    - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
+    - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -186,6 +189,48 @@ MonoBehaviour:
         - m_Target: {fileID: 23213909}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: BackAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 23213909}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 23213909}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 23213909}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -260,6 +305,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -322,6 +370,48 @@ MonoBehaviour:
         - m_Target: {fileID: 48024296}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 48024296}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 48024296}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 48024296}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -466,7 +556,7 @@ Animator:
   m_GameObject: {fileID: 48024294}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: b987437da54108a499df12e5f6a3f7a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -532,6 +622,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -594,6 +687,48 @@ MonoBehaviour:
         - m_Target: {fileID: 76340074}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 76340074}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 76340074}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 76340074}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -738,7 +873,7 @@ Animator:
   m_GameObject: {fileID: 76340072}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: b987437da54108a499df12e5f6a3f7a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -808,6 +943,7 @@ GameObject:
   - component: {fileID: 98747926}
   - component: {fileID: 98747927}
   - component: {fileID: 98747928}
+  - component: {fileID: 98747929}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -857,7 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 134.49254, y: 310.99255}
+  scrollPos: {x: -4.0243835, y: 316.7805}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 591
@@ -869,9 +1005,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 98747888}
+  - {fileID: 98747903}
   selectedCommands:
-  - {fileID: 98747897}
+  - {fileID: 98747929}
   variables: []
   description: 
   stepPause: 0
@@ -954,8 +1090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 197.52438
-    y: 67.71951
+    x: 200.52438
+    y: 60.719513
     width: 118
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1096,6 +1232,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 98747905}
   commandList:
+  - {fileID: 98747929}
   - {fileID: 98747922}
   - {fileID: 98747921}
   - {fileID: 98747904}
@@ -1815,6 +1952,33 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &98747929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98747886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: ....................
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &108278067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &146431031
 Animator:
   serializedVersion: 4
@@ -1950,6 +2114,8 @@ PlayableDirector:
     value: {fileID: 872121556}
   - key: {fileID: -7116665304942724179, guid: 4845f3d24cb0135468c4cfdc5a40c89a, type: 2}
     value: {fileID: 555798334}
+  - key: {fileID: -1812377770819380123, guid: 4845f3d24cb0135468c4cfdc5a40c89a, type: 2}
+    value: {fileID: 1093249106}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &146431033
@@ -21376,6 +21542,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
     - {fileID: 11400000, guid: e34abe0cdf60e8a4ba952236db3468cd, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -21451,7 +21618,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 439674917}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
-          m_MethodName: BackAnim
+          m_MethodName: HokouBack
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21507,7 +21674,21 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 439674917}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
-          m_MethodName: HokouBack
+          m_MethodName: HokouFront
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 439674917}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21938,6 +22119,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -22009,6 +22193,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 497319998}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 497319998}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 497319998}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &497319998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22028,8 +22254,12 @@ MonoBehaviour:
   anim: {fileID: 497320002}
   onoff: 1
   animspeed: 0
-  spriteRenderer: {fileID: 0}
-  sprites: []
+  spriteRenderer: {fileID: 497319999}
+  sprites:
+  - {fileID: 21300000, guid: eae8a5e9969e45346bcbfed13a6935e7, type: 3}
+  - {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
+  - {fileID: 21300000, guid: eadd8c3e3ed834c45b0fc7711331d479, type: 3}
+  - {fileID: 21300000, guid: 352aeae92b33dd347af61a27dce68001, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &497319999
 SpriteRenderer:
@@ -22072,7 +22302,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22100,7 +22330,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -22140,7 +22370,7 @@ Animator:
   m_GameObject: {fileID: 497319996}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec3642a159003694bbea13565180572d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -22239,6 +22469,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d0e3d1e2589cdbd4c9fb6526c4cd0862,
         type: 3}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fb3e35720c41c048a59569e5d4af638,
+        type: 3}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 90b4ddf645a07da4ab7daaf2df3c3de2,
+        type: 3}
     - target: {fileID: 2517173275176152297, guid: ccc7198b6e097124a900fc5b63a5e99c,
         type: 3}
       propertyPath: m_SortingOrder
@@ -22298,6 +22540,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
     - {fileID: 11400000, guid: faa68a2232f7c514bbb4c53683037b80, type: 2}
     - {fileID: 11400000, guid: 9eb7e034c8feb2f4caf0b9bd81813840, type: 2}
+    - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -22332,6 +22578,62 @@ MonoBehaviour:
         - m_Target: {fileID: 534975244}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: BackAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 534975244}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: RightAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 534975244}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 534975244}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 534975244}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23036,6 +23338,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
     - {fileID: 11400000, guid: faa68a2232f7c514bbb4c53683037b80, type: 2}
     - {fileID: 11400000, guid: 9eb7e034c8feb2f4caf0b9bd81813840, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -23070,6 +23375,48 @@ MonoBehaviour:
         - m_Target: {fileID: 757943951}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: BackAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 757943951}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 757943951}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 757943951}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23409,7 +23756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872121552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 46.31, z: -10}
+  m_LocalPosition: {x: 0.01, y: 6.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45051,7 +45398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &925294838
 Animator:
   serializedVersion: 4
@@ -45090,9 +45437,9 @@ PlayableDirector:
   - key: {fileID: 4992796514600225459, guid: 78b3ae804b676ae47a27f2de51b8a34d, type: 2}
     value: {fileID: 439674921}
   - key: {fileID: -7914371534391896240, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 419352296}
+    value: {fileID: 23213905}
   - key: {fileID: -9201765934910028289, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 757943952}
   - key: {fileID: -4920803340619567916, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
     value: {fileID: 1573520061}
   - key: {fileID: 5565159808954272914, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
@@ -45129,16 +45476,12 @@ PlayableDirector:
     value: {fileID: 562465947}
   - key: {fileID: -3013300138859370757, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
     value: {fileID: 439674921}
-  - key: {fileID: 727198819842436848, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 439674916}
   - key: {fileID: 2094308880520069933, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 2009305950}
-  - key: {fileID: 3426854000903811363, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 719403089}
+    value: {fileID: 534975246}
   - key: {fileID: -30014102434369273, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
     value: {fileID: 1093249106}
-  - key: {fileID: 2084755161445651818, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
-    value: {fileID: 0}
+  - key: {fileID: 3946678141544352657, guid: fd5a52d737bee7c4b9c6da8b5b19ba61, type: 2}
+    value: {fileID: 719403086}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &925294840
@@ -45198,6 +45541,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -45260,6 +45606,48 @@ MonoBehaviour:
         - m_Target: {fileID: 1047615864}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1047615864}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1047615864}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1047615864}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -45543,6 +45931,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -45614,6 +46005,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1072416429}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1072416429}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1072416429}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1072416429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45635,10 +46068,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1072416430}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: eae8a5e9969e45346bcbfed13a6935e7, type: 3}
+  - {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
+  - {fileID: 21300000, guid: eadd8c3e3ed834c45b0fc7711331d479, type: 3}
+  - {fileID: 21300000, guid: 352aeae92b33dd347af61a27dce68001, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1072416430
 SpriteRenderer:
@@ -45681,7 +46114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -45709,7 +46142,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -45749,7 +46182,7 @@ Animator:
   m_GameObject: {fileID: 1072416427}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec3642a159003694bbea13565180572d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -45983,6 +46416,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -46054,6 +46490,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1120239344}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1120239344}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1120239344}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1120239344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46075,10 +46553,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1120239345}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: 87e6f264fc4f1834391397030be54c4d, type: 3}
+  - {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
+  - {fileID: 21300000, guid: 4f03af545020e3d4eb65546daa5216b3, type: 3}
+  - {fileID: 21300000, guid: 504281e05c8c00d4f94abc185a6dff00, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1120239345
 SpriteRenderer:
@@ -46121,7 +46599,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -46149,7 +46627,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -46189,7 +46667,7 @@ Animator:
   m_GameObject: {fileID: 1120239342}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d40efbf5fa51ff4dab790804892fc37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -46255,6 +46733,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -46302,7 +46782,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1155620556}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
-          m_MethodName: tretg
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -46317,6 +46797,34 @@ MonoBehaviour:
         - m_Target: {fileID: 1155620556}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1155620556}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1155620556}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -46347,10 +46855,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1155620557}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: 87e6f264fc4f1834391397030be54c4d, type: 3}
+  - {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
+  - {fileID: 21300000, guid: 4f03af545020e3d4eb65546daa5216b3, type: 3}
+  - {fileID: 21300000, guid: 504281e05c8c00d4f94abc185a6dff00, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1155620557
 SpriteRenderer:
@@ -46393,7 +46901,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -46421,7 +46929,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -46461,7 +46969,7 @@ Animator:
   m_GameObject: {fileID: 1155620554}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d40efbf5fa51ff4dab790804892fc37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -46527,6 +47035,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -46598,6 +47109,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1168171293}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1168171293}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1168171293}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1168171293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46619,10 +47172,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1168171294}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: 87e6f264fc4f1834391397030be54c4d, type: 3}
+  - {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
+  - {fileID: 21300000, guid: 4f03af545020e3d4eb65546daa5216b3, type: 3}
+  - {fileID: 21300000, guid: 504281e05c8c00d4f94abc185a6dff00, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1168171294
 SpriteRenderer:
@@ -46665,7 +47218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -46693,7 +47246,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -46733,7 +47286,7 @@ Animator:
   m_GameObject: {fileID: 1168171291}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d40efbf5fa51ff4dab790804892fc37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -46799,6 +47352,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -46861,6 +47417,48 @@ MonoBehaviour:
         - m_Target: {fileID: 1185991991}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1185991991}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1185991991}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1185991991}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -47005,7 +47603,7 @@ Animator:
   m_GameObject: {fileID: 1185991989}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: b987437da54108a499df12e5f6a3f7a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -47071,6 +47669,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -47142,6 +47743,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1228110516}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1228110516}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1228110516}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1228110516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47163,10 +47806,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1228110517}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: eae8a5e9969e45346bcbfed13a6935e7, type: 3}
+  - {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
+  - {fileID: 21300000, guid: eadd8c3e3ed834c45b0fc7711331d479, type: 3}
+  - {fileID: 21300000, guid: 352aeae92b33dd347af61a27dce68001, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1228110517
 SpriteRenderer:
@@ -47209,7 +47852,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -47237,7 +47880,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -47277,7 +47920,7 @@ Animator:
   m_GameObject: {fileID: 1228110514}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec3642a159003694bbea13565180572d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -47723,7 +48366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &1534619201
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -47733,7 +48376,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1534619200}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 78b3ae804b676ae47a27f2de51b8a34d, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e0f1e25440c93c74f9f612981b30ac23, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -47742,6 +48385,10 @@ PlayableDirector:
   - key: {fileID: 4992796514600225459, guid: 78b3ae804b676ae47a27f2de51b8a34d, type: 2}
     value: {fileID: 439674921}
   - key: {fileID: 6957952281619430046, guid: 78b3ae804b676ae47a27f2de51b8a34d, type: 2}
+    value: {fileID: 1063387340}
+  - key: {fileID: -2693602428436627704, guid: e0f1e25440c93c74f9f612981b30ac23, type: 2}
+    value: {fileID: 439674921}
+  - key: {fileID: 9170280286747865741, guid: e0f1e25440c93c74f9f612981b30ac23, type: 2}
     value: {fileID: 1063387340}
   m_ExposedReferences:
     m_References: []
@@ -47853,6 +48500,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -47924,6 +48574,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1573520062}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1573520062}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1573520062}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1573520062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47945,10 +48637,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1573520063}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: eae8a5e9969e45346bcbfed13a6935e7, type: 3}
+  - {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
+  - {fileID: 21300000, guid: eadd8c3e3ed834c45b0fc7711331d479, type: 3}
+  - {fileID: 21300000, guid: 352aeae92b33dd347af61a27dce68001, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1573520063
 SpriteRenderer:
@@ -47991,7 +48683,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4928ba230ab53934ca7df25b88156ed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -48019,7 +48711,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -48059,7 +48751,7 @@ Animator:
   m_GameObject: {fileID: 1573520060}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec3642a159003694bbea13565180572d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -69743,6 +70435,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -69814,6 +70509,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1598952108}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1598952108}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1598952108}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1598952108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69833,8 +70570,12 @@ MonoBehaviour:
   anim: {fileID: 1598952112}
   onoff: 1
   animspeed: 0
-  spriteRenderer: {fileID: 0}
-  sprites: []
+  spriteRenderer: {fileID: 1598952109}
+  sprites:
+  - {fileID: 21300000, guid: 87e6f264fc4f1834391397030be54c4d, type: 3}
+  - {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
+  - {fileID: 21300000, guid: 4f03af545020e3d4eb65546daa5216b3, type: 3}
+  - {fileID: 21300000, guid: 504281e05c8c00d4f94abc185a6dff00, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1598952109
 SpriteRenderer:
@@ -69877,7 +70618,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -69905,7 +70646,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -69945,7 +70686,7 @@ Animator:
   m_GameObject: {fileID: 1598952106}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d40efbf5fa51ff4dab790804892fc37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70011,6 +70752,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -70073,6 +70817,48 @@ MonoBehaviour:
         - m_Target: {fileID: 1601428963}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: LeftAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1601428963}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1601428963}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1601428963}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -70217,7 +71003,7 @@ Animator:
   m_GameObject: {fileID: 1601428961}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: b987437da54108a499df12e5f6a3f7a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70275,7 +71061,22 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
+    - {fileID: 11400000, guid: e64930952efbfb94d9cbb7d2718be6de, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1615547843}
+          m_TargetAssemblyTypeName: Nesy_TimeLine, Assembly-CSharp
+          m_MethodName: StopTimeLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1615547843}
@@ -70595,6 +71396,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: ee5a5db375036704dacf64451bfb6cb1, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -70666,6 +71470,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1766087693}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1766087693}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1766087693}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1766087693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70687,10 +71533,10 @@ MonoBehaviour:
   animspeed: 0
   spriteRenderer: {fileID: 1766087694}
   sprites:
-  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
-  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
-  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
-  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
+  - {fileID: 21300000, guid: 87e6f264fc4f1834391397030be54c4d, type: 3}
+  - {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
+  - {fileID: 21300000, guid: 4f03af545020e3d4eb65546daa5216b3, type: 3}
+  - {fileID: 21300000, guid: 504281e05c8c00d4f94abc185a6dff00, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &1766087694
 SpriteRenderer:
@@ -70733,7 +71579,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7356b5c47e13756478fd6ebbc40f6801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -70761,7 +71607,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.5}
+    oldSize: {x: 0.96875, y: 1.5}
     newSize: {x: 1, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -70801,7 +71647,7 @@ Animator:
   m_GameObject: {fileID: 1766087691}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d40efbf5fa51ff4dab790804892fc37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -71195,6 +72041,42 @@ PlayableDirector:
     value: {fileID: 757943949}
   - key: {fileID: 6832074751342913690, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
     value: {fileID: 534975242}
+  - key: {fileID: -407229577002474386, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 76340078}
+  - key: {fileID: -1612576665685679648, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1155620560}
+  - key: {fileID: -6340295275155051495, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1228110520}
+  - key: {fileID: -287350158623681955, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 48024300}
+  - key: {fileID: 6732260455712302485, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1120239348}
+  - key: {fileID: -3009697625312665815, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1573520066}
+  - key: {fileID: 5715168721541812651, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1766087697}
+  - key: {fileID: 6960475129681382596, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1185991995}
+  - key: {fileID: 1586574630222916136, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 2133591954}
+  - key: {fileID: 2545084086492388245, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1047615868}
+  - key: {fileID: 4261323024373030562, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1598952112}
+  - key: {fileID: 7241992346523372337, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 497320002}
+  - key: {fileID: -1971780453417855718, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1601428967}
+  - key: {fileID: 6121521202957327493, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1072416433}
+  - key: {fileID: 8775607678252894839, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1168171297}
+  - key: {fileID: 8210212977829628264, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 2025458241}
+  - key: {fileID: 5180116775302651798, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 1615547842}
+  - key: {fileID: -2109987817194643934, guid: bfbce16f1f78ce04c8e82c3981732e9f, type: 2}
+    value: {fileID: 719403086}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1933222106
@@ -71285,7 +72167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0094299, y: -1200}
+  m_AnchoredPosition: {x: -0.000030549, y: -1200}
   m_SizeDelta: {x: 2133.2, y: 1200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1965496493
@@ -71680,7 +72562,22 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
+    - {fileID: 11400000, guid: e64930952efbfb94d9cbb7d2718be6de, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2025458239}
+          m_TargetAssemblyTypeName: Nesy_TimeLine, Assembly-CSharp
+          m_MethodName: StopTimeLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2025458239}
@@ -71755,6 +72652,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2094019297 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8635519560175073508, guid: 27c3c7eb206a73740902d451be4f9fe0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8635519559082021042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094019298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8635519560175073505, guid: 27c3c7eb206a73740902d451be4f9fe0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8635519559082021042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfa7eacaa8831847a4391c72e75c421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2133591948
 GameObject:
   m_ObjectHideFlags: 0
@@ -71796,6 +72711,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8d1da0c37a6c1b043aba96b7a6ed1070, type: 2}
     - {fileID: 11400000, guid: 3b2ab2f140f753146bbe5152b4bbfc35, type: 2}
     - {fileID: 11400000, guid: ec65c3b9f8639c347bdb9cd946b7fc17, type: 2}
+    - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
+    - {fileID: 11400000, guid: 3cdcffed31b2fe74e901fc2a81856074, type: 2}
+    - {fileID: 11400000, guid: 40b6a448a3311204f8dd65575ab33563, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -71867,6 +72785,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2133591950}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: Stopanim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2133591950}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2133591950}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: StartAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &2133591950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71886,12 +72846,12 @@ MonoBehaviour:
   anim: {fileID: 2133591954}
   onoff: 1
   animspeed: 0
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2133591951}
   sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
+  - {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20, type: 3}
+  - {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e, type: 3}
+  - {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881, type: 3}
   transposi: {x: 0, y: 0}
 --- !u!212 &2133591951
 SpriteRenderer:
@@ -72002,7 +72962,7 @@ Animator:
   m_GameObject: {fileID: 2133591948}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+  m_Controller: {fileID: 9100000, guid: b987437da54108a499df12e5f6a3f7a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -72034,6 +72994,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Signals.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Signals.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdab86f8e46eabc46909d6316899ceef,
+        type: 2}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094019298}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Nesy_SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073504, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073505, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: Stopsource
+      value: 
+      objectReference: {fileID: 2094019297}
     - target: {fileID: 8635519560175073507, guid: 27c3c7eb206a73740902d451be4f9fe0,
         type: 3}
       propertyPath: m_Name
@@ -72042,7 +73058,17 @@ PrefabInstance:
     - target: {fileID: 8635519560175073507, guid: 27c3c7eb206a73740902d451be4f9fe0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073508, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635519560175073508, guid: 27c3c7eb206a73740902d451be4f9fe0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8635519560175073511, guid: 27c3c7eb206a73740902d451be4f9fe0,
         type: 3}

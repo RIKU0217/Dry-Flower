@@ -8,20 +8,20 @@ public class Nesy_SoundManager : MonoBehaviour
 
     public AudioSource[] se;
 
-    private void Awake()
-    {
+    //private void Awake()
+    //{
 
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
+      //  if (instance == null)
+       // {
+         //   instance = this;
+       // }
+       // else if (instance != this)
+        //{
+         //   Destroy(gameObject);
+        //}
 
-        DontDestroyOnLoad(gameObject);
-    }
+        //DontDestroyOnLoad(gameObject);
+    //}
     /// <summary>
     /// SEを鳴らす(0:ゲームオーバー 1:回復 2:被弾 3:攻撃 4:UI 5:コイン)
     /// </summary>
@@ -36,6 +36,8 @@ public class Nesy_SoundManager : MonoBehaviour
     [SerializeField]
     private AudioSource source;
     [SerializeField]
+    private AudioSource Stopsource;
+    [SerializeField]
     private AudioClip clip;
     [SerializeField]
     private float Volume;
@@ -49,6 +51,11 @@ public class Nesy_SoundManager : MonoBehaviour
     public void SEvolume()
     {
         source.volume = Volume;
+    }
+
+    public void StopBGM()
+    {
+        Stopsource.enabled = false;
     }
 
 
