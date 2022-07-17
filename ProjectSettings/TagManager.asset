@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AttackPoint
+  - FlagArea
+  - Enemy
+  - Bullet
+  - EnemyAttackPoint
+  - EnemyBullet
+  - Wall
+  - Goal
   layers:
   - Default
   - TransparentFX
