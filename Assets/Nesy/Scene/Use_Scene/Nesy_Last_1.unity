@@ -253,6 +253,7 @@ MonoBehaviour:
   rb2d: {fileID: 48024299}
   anim: {fileID: 48024300}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 48024297}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -524,6 +525,7 @@ MonoBehaviour:
   rb2d: {fileID: 76340077}
   anim: {fileID: 76340078}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 76340075}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -843,8 +845,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 98747888}
-  selectedCommands:
-  - {fileID: 98747940}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -21851,6 +21852,7 @@ MonoBehaviour:
   rb2d: {fileID: 419352300}
   anim: {fileID: 419352301}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 419352298}
   sprites:
   - {fileID: 0}
@@ -22416,6 +22418,7 @@ MonoBehaviour:
   rb2d: {fileID: 439674920}
   anim: {fileID: 439674921}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -22903,6 +22906,7 @@ MonoBehaviour:
   rb2d: {fileID: 497320001}
   anim: {fileID: 497320002}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -24081,6 +24085,7 @@ MonoBehaviour:
   rb2d: {fileID: 818481187}
   anim: {fileID: 818481188}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -46254,6 +46259,7 @@ MonoBehaviour:
   rb2d: {fileID: 1047615867}
   anim: {fileID: 1047615868}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -46598,6 +46604,7 @@ MonoBehaviour:
   rb2d: {fileID: 1072416432}
   anim: {fileID: 1072416433}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1072416430}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -46959,6 +46966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   se: []
   source: {fileID: 1093249108}
+  Stopsource: {fileID: 0}
   clip: {fileID: 8300000, guid: b8cc2a08a1e0b4d4b8e9dac65e7440e3, type: 3}
   Volume: 0
 --- !u!82 &1093249108
@@ -47298,6 +47306,7 @@ MonoBehaviour:
   rb2d: {fileID: 1120239347}
   anim: {fileID: 1120239348}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1120239345}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -47569,6 +47578,7 @@ MonoBehaviour:
   rb2d: {fileID: 1155620559}
   anim: {fileID: 1155620560}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1155620557}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -47840,6 +47850,7 @@ MonoBehaviour:
   rb2d: {fileID: 1168171296}
   anim: {fileID: 1168171297}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1168171294}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -48111,6 +48122,7 @@ MonoBehaviour:
   rb2d: {fileID: 1185991994}
   anim: {fileID: 1185991995}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1185991992}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -48382,6 +48394,7 @@ MonoBehaviour:
   rb2d: {fileID: 1228110519}
   anim: {fileID: 1228110520}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1228110517}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -49161,6 +49174,7 @@ MonoBehaviour:
   rb2d: {fileID: 1573520065}
   anim: {fileID: 1573520066}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1573520063}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -49512,6 +49526,7 @@ MonoBehaviour:
   rb2d: {fileID: 1598952111}
   anim: {fileID: 1598952112}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -49779,6 +49794,7 @@ MonoBehaviour:
   rb2d: {fileID: 1601428966}
   anim: {fileID: 1601428967}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1601428964}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -71901,6 +71917,7 @@ MonoBehaviour:
   rb2d: {fileID: 1766087696}
   anim: {fileID: 1766087697}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 1766087694}
   sprites:
   - {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2, type: 3}
@@ -72617,6 +72634,7 @@ MonoBehaviour:
   rb2d: {fileID: 2009305947}
   anim: {fileID: 2009305948}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites: []
   transposi: {x: 0, y: 0}
@@ -73204,6 +73222,7 @@ MonoBehaviour:
   rb2d: {fileID: 2133591953}
   anim: {fileID: 2133591954}
   onoff: 1
+  animspeed: 0
   spriteRenderer: {fileID: 0}
   sprites:
   - {fileID: 0}

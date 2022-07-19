@@ -7,6 +7,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 7809825384185594467}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 7809825384185594463}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 7809825384185594461}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 28aeec1512fbfc043a525799aae18172,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f3abe8b919e86874f81aadf812898197,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ceed7cc341a6504a8b22210a50f1df6,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cfe17df5d521784592812cf12dfcb6c,
+        type: 3}
     - target: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Sprite
@@ -16,7 +60,7 @@ PrefabInstance:
     - target: {fileID: 974085637240844362, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Name
-      value: Haruaki
+      value: Haruaki Variant
       objectReference: {fileID: 0}
     - target: {fileID: 974085637240844404, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
@@ -83,5 +127,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 974085637240844407, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9852802af824ea042bb45d7f5b6962e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e0768a135b964e87a6b6ae626aa5b, type: 3}
+--- !u!212 &7809825384185594461 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7054527587560387092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &7809825384185594463 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 974085637240844363, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7054527587560387092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7809825384185594467 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 974085637240844407, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7054527587560387092}
+  m_PrefabAsset: {fileID: 0}

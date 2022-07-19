@@ -72,6 +72,50 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3d6d3bfec24499c4b9bb1497c64a7369, type: 2}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 4629465441112087513}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 4629465441112087525}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 4629465441112087527}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 171f7069cd2ca8447bf136a09baf4fd2,
+        type: 3}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5694db8233dd3a143863b03712948e20,
+        type: 3}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: c59cb92ec9f164d47b1b200b48c7dc0e,
+        type: 3}
+    - target: {fileID: 2517173275176152296, guid: ccc7198b6e097124a900fc5b63a5e99c,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 53dd5999e1cb3074dbf7047b97025881,
+        type: 3}
     - target: {fileID: 2517173275176152297, guid: ccc7198b6e097124a900fc5b63a5e99c,
         type: 3}
       propertyPath: m_Sprite
@@ -86,7 +130,25 @@ PrefabInstance:
     - target: {fileID: 2517173275176152298, guid: ccc7198b6e097124a900fc5b63a5e99c,
         type: 3}
       propertyPath: m_Name
-      value: Mobu Variant
+      value: Brown_Mobu Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc7198b6e097124a900fc5b63a5e99c, type: 3}
+--- !u!95 &4629465441112087513 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2517173275176152279, guid: ccc7198b6e097124a900fc5b63a5e99c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7120720476012672782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &4629465441112087525 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2517173275176152299, guid: ccc7198b6e097124a900fc5b63a5e99c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7120720476012672782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4629465441112087527 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2517173275176152297, guid: ccc7198b6e097124a900fc5b63a5e99c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7120720476012672782}
+  m_PrefabAsset: {fileID: 0}

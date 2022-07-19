@@ -9,6 +9,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2517173275176152279}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 2517173275176152299}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2517173275176152297}
@@ -17,6 +27,30 @@ PrefabInstance:
       propertyPath: sprites.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: eeba7bc556a9fec418f996e7a33643d8,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d0e3d1e2589cdbd4c9fb6526c4cd0862,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fb3e35720c41c048a59569e5d4af638,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 90b4ddf645a07da4ab7daaf2df3c3de2,
+        type: 3}
     - target: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Sprite
@@ -95,9 +129,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e0768a135b964e87a6b6ae626aa5b, type: 3}
+--- !u!95 &2517173275176152279 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 974085637240844407, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3416664730003561632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &2517173275176152297 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3416664730003561632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2517173275176152299 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 974085637240844363, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
     type: 3}
   m_PrefabInstance: {fileID: 3416664730003561632}
   m_PrefabAsset: {fileID: 0}
