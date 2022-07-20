@@ -148,9 +148,14 @@ public class GameManeger : MonoBehaviour
 
     [SerializeField]
     Text text;
+    [SerializeField]
+    private Canvas canvas;
+
     public void DestoryText()
     {
-        Destroy(text);
+        canvas.enabled = false;
+       //
+       //Destroy(text);
     }
 
  
