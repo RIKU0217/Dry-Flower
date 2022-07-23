@@ -12,6 +12,7 @@ TagManager:
   - EnemyBullet
   - Wall
   - Goal
+  - Gaoll
   layers:
   - Default
   - TransparentFX
