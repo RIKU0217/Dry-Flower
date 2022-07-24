@@ -40,6 +40,9 @@ EditorBuildSettings:
     guid: 4178482b861bf074da1ed50fecc0f9bb
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/10.unity
+    guid: 8d936f1966d6ac642b5dac55cd9023ea
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/11.unity
     guid: fe4939fcb3a00ef419b9df3b406fef68
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/Nesy_Last_1.unity

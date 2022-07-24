@@ -1056,7 +1056,6 @@ GameObject:
   - component: {fileID: 1838257443}
   - component: {fileID: 1838257442}
   - component: {fileID: 1838257441}
-  - component: {fileID: 1838257440}
   - component: {fileID: 1838257439}
   - component: {fileID: 1838257445}
   m_Layer: 0
@@ -1082,32 +1081,7 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 388387569}
   methodName: SceneLoad
-  delay: 0
---- !u!114 &1838257440
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838257438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  indentLevel: 0
-  duration: 10
-  fadeOut: 1
-  targetView: {fileID: 207452496}
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  targetCamera: {fileID: 1668206148}
-  fadeTweenType: 4
-  orthoSizeTweenType: 4
-  posTweenType: 4
-  rotTweenType: 4
+  delay: 4
 --- !u!114 &1838257441
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1139,7 +1113,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 257
     y: 122
-    width: 112.66667
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1149,7 +1123,6 @@ MonoBehaviour:
   eventHandler: {fileID: 1838257441}
   commandList:
   - {fileID: 1838257445}
-  - {fileID: 1838257440}
   - {fileID: 1838257439}
   suppressAllAutoSelections: 0
 --- !u!114 &1838257443
@@ -1165,7 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 18, y: 11.833328}
+  scrollPos: {x: 496.5, y: 316.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 387.66666
@@ -1179,7 +1152,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1838257442}
   selectedCommands:
-  - {fileID: 1838257440}
+  - {fileID: 1838257439}
   variables: []
   description: 
   stepPause: 0
