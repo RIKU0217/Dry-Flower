@@ -14689,6 +14689,19 @@ MonoBehaviour:
   isGameClear: 0
   isGameOver: 0
   nextScene: Matsuri_MainScene
+--- !u!114 &1255405448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255405444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c4e660e442c954fbd79af0f58fdc82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 4
 --- !u!1001 &1260133332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14978,7 +14991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298230614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8663712, y: -0.00001001358, z: 0}
+  m_LocalPosition: {x: -5.0696793, y: -4.0499997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15015,7 +15028,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7772658, y: 1}
+    m_SensorSize: {x: 1.7779292, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15053,6 +15066,7 @@ GameObject:
   - component: {fileID: 1343865029}
   - component: {fileID: 1343865028}
   - component: {fileID: 1343865030}
+  - component: {fileID: 1343865031}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -15074,9 +15088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 726
-    y: 256
-    width: 111
+    x: 727.9231
+    y: 257.92307
+    width: 108.974304
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15087,6 +15101,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1343865028}
   - {fileID: 1343865030}
+  - {fileID: 1343865031}
   suppressAllAutoSelections: 0
 --- !u!114 &1343865026
 MonoBehaviour:
@@ -15101,11 +15116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 32.5, y: 60}
+  scrollPos: {x: -36.269466, y: 80.07675}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 1
+  blockViewHeight: 200
+  zoom: 0.52000046
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -15115,7 +15130,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1343865025}
   selectedCommands:
-  - {fileID: 1343865030}
+  - {fileID: 1343865031}
   variables: []
   description: 
   stepPause: 0
@@ -15189,7 +15204,7 @@ MonoBehaviour:
   message: Start
 --- !u!114 &1343865030
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15201,7 +15216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: dasda
+  storyText: "\u3088\u3057\uFF01\u5F8C\u306F\u3001\u5165\u308A\u53E3\u306B\u623B\u308B\u3060\u3051\u3060\u3002"
   description: 
   character: {fileID: 1034703626}
   portrait: {fileID: 0}
@@ -15214,6 +15229,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1343865031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343865023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  targetObject: {fileID: 1255405444}
+  methodName: SceneLoad
+  delay: 0
 --- !u!1001 &1388783472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24243,7 +24275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553722930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.283628, y: -4.92999, z: -10}
+  m_LocalPosition: {x: -4.940321, y: -5.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25373,12 +25405,12 @@ PrefabInstance:
     - target: {fileID: 4626277540805613262, guid: aa9d49fa3b0a94d4b84d51e94d65955c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.15
+      value: -10.01
       objectReference: {fileID: 0}
     - target: {fileID: 4626277540805613262, guid: aa9d49fa3b0a94d4b84d51e94d65955c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.93
+      value: -9.98
       objectReference: {fileID: 0}
     - target: {fileID: 4626277540805613262, guid: aa9d49fa3b0a94d4b84d51e94d65955c,
         type: 3}
