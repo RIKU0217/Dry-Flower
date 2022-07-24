@@ -15,13 +15,7 @@ public class Nesy_Goal : MonoBehaviour
     [SerializeField]
     private string Message;
 
-    [SerializeField]
-    public GameObject obj;
-    [SerializeField]
-    private Collider2D coll1;
-    [SerializeField]
-    private Collider2D coll2;
-
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Goal"))

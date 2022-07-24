@@ -1108,8 +1108,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8790626643768714408, guid: 40837abaad754d44ba263742650354ba,
         type: 3}
+      propertyPath: onoff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790626643768714408, guid: 40837abaad754d44ba263742650354ba,
+        type: 3}
       propertyPath: transposi.x
       value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790626643768714408, guid: 40837abaad754d44ba263742650354ba,
+        type: 3}
+      propertyPath: playerdirection.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8790626643768714408, guid: 40837abaad754d44ba263742650354ba,
         type: 3}
@@ -6231,6 +6241,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4629465441112087526, guid: 1b4e061c69350bd4e9279d79e9baf210,
         type: 3}
+      propertyPath: playerdirection.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629465441112087526, guid: 1b4e061c69350bd4e9279d79e9baf210,
+        type: 3}
+      propertyPath: playerdirection.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629465441112087526, guid: 1b4e061c69350bd4e9279d79e9baf210,
+        type: 3}
       propertyPath: sprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 39e0cd77dab218645877246240df557d,
@@ -8325,6 +8345,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9eb7e034c8feb2f4caf0b9bd81813840, type: 2}
     - {fileID: 11400000, guid: a61058346a8e88245a901f85f4b74cd0, type: 2}
     - {fileID: 11400000, guid: 9b5f46c0c69df9741ba22d9bf3dc9b84, type: 2}
+    - {fileID: 11400000, guid: faa68a2232f7c514bbb4c53683037b80, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -8359,6 +8380,20 @@ MonoBehaviour:
         - m_Target: {fileID: 1380157064}
           m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
           m_MethodName: Trans
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1380157064}
+          m_TargetAssemblyTypeName: Nesy_Player, Assembly-CSharp
+          m_MethodName: HokouBack
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9263,6 +9298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
         type: 3}
+      propertyPath: onoff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
       propertyPath: transposi.x
       value: -10
       objectReference: {fileID: 0}
@@ -9270,6 +9310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: transposi.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
+        type: 3}
+      propertyPath: playerdirection.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4592642067579517480, guid: 008c7604b05800a49917b789bb0f9425,
         type: 3}
@@ -9380,6 +9425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   se: []
   source: {fileID: 1707812318}
+  Stopsource: {fileID: 0}
   clip: {fileID: 8300000, guid: e1daaf04401aed64cb906e85b9db3fbd, type: 3}
   Volume: 0
 --- !u!82 &1707812318

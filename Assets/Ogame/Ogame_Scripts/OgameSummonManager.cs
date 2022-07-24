@@ -97,11 +97,11 @@ public class OgameSummonManager : MonoBehaviour
         if (gameTimer < clearTime * 2 / 3 & gameTimer >= clearTime / 3)
         {
             randomRange = 4;
-            summonInterval = 2.5f;
+            summonInterval = 2f;
         }
         else if (gameTimer < clearTime / 3)
         {
-            summonInterval = 2f;
+            summonInterval = 1.5f;
         }
     }
 
@@ -109,7 +109,7 @@ public class OgameSummonManager : MonoBehaviour
     {
         if (gameTimer <= 0)
         {
-            SceneManager.LoadScene("Ogame_KairiGame");
+            SceneManager.LoadScene("10");
         }
     }
 

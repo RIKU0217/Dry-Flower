@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -13,23 +13,38 @@ EditorBuildSettings:
     guid: 4ca5718cc9996664a825bbd8925a3ebd
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/2.unity
+    guid: e01206be79709c249bac1c47660b1876
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/3.unity
     guid: 560c287530c293246a8b1a31f73f0ef1
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/4.unity
-    guid: 6f766acd8130cdf41bbb3693726bd373
+    guid: 364d00b933cf28b4d9d5da6e7ad8dc87
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/5.unity
-    guid: 2f4a6e0f3dc24794ba308a5ba5ae9a62
+    guid: 6f766acd8130cdf41bbb3693726bd373
   - enabled: 1
-    path: Assets/Nesy/Scene/Sampule.unity
-    guid: a93ef9e1c61777b4fbd073d26fac4001
+    path: Assets/Nesy/Scene/Use_Scene/6.unity
+    guid: 23a64cfcd869ad14996224c8131c2881
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/7.unity
+    guid: 2f4a6e0f3dc24794ba308a5ba5ae9a62
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/8.unity
+    guid: 5fe68b748041dc04c9b4921aa38ee58c
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/9.unity
+    guid: 4178482b861bf074da1ed50fecc0f9bb
+  - enabled: 1
+    path: Assets/Nesy/Scene/Use_Scene/10.unity
+    guid: fe4939fcb3a00ef419b9df3b406fef68
   - enabled: 1
     path: Assets/Nesy/Scene/Use_Scene/Nesy_Last_1.unity
     guid: 20836701999fb4e4d9d412d7fb92eabd
-  - enabled: 1
-    path: Assets/Nesy/Scene/Use_Scene/Nesy_Last_Scene0.unity
-    guid: fe4939fcb3a00ef419b9df3b406fef68
-  - enabled: 1
-    path: Assets/Nesy/Scene/Use_Scene/3.unity
-    guid: 364d00b933cf28b4d9d5da6e7ad8dc87
+  - enabled: 0
+    path: Assets/Nesy/Scene/Sampule.unity
+    guid: a93ef9e1c61777b4fbd073d26fac4001
   m_configObjects: {}

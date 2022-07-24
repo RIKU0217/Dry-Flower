@@ -747,6 +747,7 @@ GameObject:
   - component: {fileID: 98747962}
   - component: {fileID: 98747963}
   - component: {fileID: 98747964}
+  - component: {fileID: 98747965}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -844,8 +845,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 98747888}
-  selectedCommands: []
+  - {fileID: 98747903}
+  selectedCommands:
+  - {fileID: 98747965}
   variables: []
   description: 
   stepPause: 0
@@ -1076,6 +1078,7 @@ MonoBehaviour:
   - {fileID: 98747924}
   - {fileID: 98747925}
   - {fileID: 98747923}
+  - {fileID: 98747965}
   suppressAllAutoSelections: 0
 --- !u!114 &98747904
 MonoBehaviour:
@@ -2779,6 +2782,23 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &98747965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98747886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 74
+  indentLevel: 0
+  targetObject: {fileID: 1987693556}
+  methodName: SceneLoad
+  delay: 5
 --- !u!1 &108278067
 GameObject:
   m_ObjectHideFlags: 0
@@ -72563,7 +72583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0e69a68f9cec94a9456d690a3894dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Nesy_Scene
+  sceneName: 1
 --- !u!114 &1987693558
 MonoBehaviour:
   m_ObjectHideFlags: 0
