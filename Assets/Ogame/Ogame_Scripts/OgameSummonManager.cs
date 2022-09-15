@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Ogame.System;
+using TMPro;
 
 public class OgameSummonManager : MonoBehaviour
 {
     public GameObject[] enemy;
 
     private bool summonTurn;
+
+    [SerializeField] private TextMeshProUGUI timerText;
 
     //bool isCalledOnce = false;
 
@@ -93,6 +96,7 @@ public class OgameSummonManager : MonoBehaviour
         if (!C_GManager.instance.isGameOver)
         {
             gameTimer -= Time.deltaTime;
+            timerText.text = ((int)gameTimer).ToString();
         }
         if (gameTimer < clearTime * 2 / 3 & gameTimer >= clearTime / 3)
         {
