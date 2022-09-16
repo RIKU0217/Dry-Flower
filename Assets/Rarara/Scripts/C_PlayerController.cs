@@ -17,7 +17,7 @@ public class C_PlayerController : MonoBehaviour
 
     private string goalTag = "Goal";
     private string enemyTag = "Enemy";
-    private string wallTag = "Wood";
+    //private string wallTag = "Wood";
 
     private BoxCollider2D area; //ˆÚ“®‰Â”\”ÍˆÍ
     private Rigidbody2D rb;

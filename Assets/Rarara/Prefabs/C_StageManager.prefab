@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67f082bc83e2bd40a2666f822c729c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  area: {fileID: 0}
   volume: {fileID: 0}
   vignetteMaxVal: 0.5

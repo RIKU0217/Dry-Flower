@@ -36,6 +36,8 @@ public class C_SceneManager : MonoBehaviour
         if (pressRetry)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            C_GManager.instance.isGameOver = false;
+            C_GManager.instance.isHide = false;
             pressRetry = false;
         }
     }
