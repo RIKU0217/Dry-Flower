@@ -58,8 +58,8 @@ public class OgamePlayer : MonoBehaviour
             isCalledOnce = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             playPermission = false;
-            Invoke("DestroyAttackPoint", 0.5f);
-            Invoke("CoolTimeReset", 1f);
+            Invoke("DestroyAttackPoint", 0.3f);
+            Invoke("CoolTimeReset", 0.6f);
         }
     }
     void DestroyAttackPoint()
