@@ -31,9 +31,9 @@ public class C_EnemyBase : MonoBehaviour
     protected Rigidbody2D target;
     private BoxCollider2D col;
     private Animator anim;
-    [SerializeField, Tooltip("発見時に表示するテキスト")] private GameObject findedText;
-    [SerializeField, Tooltip("見失った時に表示するテキスト")] private GameObject missedText;
-    [SerializeField, Tooltip("最初に向く方向")] private InitDir initDir;
+    [SerializeField, Tooltip("発見時に表示するテキスト")]       private GameObject findedText;
+    [SerializeField, Tooltip("見失った時に表示するテキスト")]   private GameObject missedText;
+    [SerializeField, Tooltip("最初に向く方向")]                 private InitDir initDir;
 
     private enum InitDir
     {
@@ -313,6 +313,7 @@ public class C_EnemyBase : MonoBehaviour
     protected IEnumerator Finded()
     {
         findedText.SetActive(true);
+        C_BGM.instance.OnFindedSE();
         yield return new WaitForSeconds(beforeChaseTime);
         findedText.SetActive(false);
         isChase = true;

@@ -10,6 +10,7 @@ public class C_BGM : MonoBehaviour
 
     [SerializeField, Range(0f, 1f), Tooltip("最大音量")] private float max = 1f;
     [SerializeField, Range(0f, 10f), Tooltip("フェード時間")] private float fadeTime = 1f;
+    [SerializeField, Tooltip("発見時のSE")] private AudioClip findedSE;
 
     //[HideInInspector] public bool compVolFadeIn = false; //フェードインの終了判定
     [HideInInspector] public bool compVolFadeOut = false; //フェードアウトの終了判定
@@ -103,5 +104,10 @@ public class C_BGM : MonoBehaviour
             timer = 0f;
             fadeIn = false;
         }
+    }
+
+    public void OnFindedSE()
+    {
+        audioSource.PlayOneShot(findedSE);
     }
 }
