@@ -36,9 +36,9 @@ public class Nesy_Player : MonoBehaviour
         if (onoff == true)
         {
             Move();
-            Animation();
         }
 
+        Animation();
         Directer();
         
 

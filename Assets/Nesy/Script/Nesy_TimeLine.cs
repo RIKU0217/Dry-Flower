@@ -19,6 +19,6 @@ public class Nesy_TimeLine : MonoBehaviour
         
     }
 
-    TimelineProjectSettings timeline;
+
     
 }

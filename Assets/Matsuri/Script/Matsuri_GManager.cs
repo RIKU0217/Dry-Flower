@@ -28,12 +28,12 @@ public class Matsuri_GManager : MonoBehaviour
                 callOnce = true;
             }
 
-            if (Input.GetKey(KeyCode.Return))
-            {
-                SceneManager.LoadScene(nextScene);
-                callOnce=false;
-                isGameClear=false;
-            }
+           // if (Input.GetKey(KeyCode.Return))
+           // {
+           //     SceneManager.LoadScene(nextScene);
+           //     callOnce=false;
+           //     isGameClear=false;
+           // }
         }
     }
 }

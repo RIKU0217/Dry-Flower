@@ -7,6 +7,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5660525108356435474}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 5660525108356435502}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 5660525108356435500}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9227cc6f03ee2604b8a59dd7bfe2ea05,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: bcc71b547662d514eaa401581d41b221,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 742d5bf3269633a4193b3495c453f360,
+        type: 3}
+    - target: {fileID: 974085637240844360, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 510a8338be69dae418f16636de3b6959,
+        type: 3}
     - target: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Sprite
@@ -16,7 +60,7 @@ PrefabInstance:
     - target: {fileID: 974085637240844362, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
       propertyPath: m_Name
-      value: Chiguuri
+      value: Chiguuri Variant
       objectReference: {fileID: 0}
     - target: {fileID: 974085637240844362, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
         type: 3}
@@ -95,3 +139,21 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 59d7be4fac769f94d9f04202c5f1f831, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e0768a135b964e87a6b6ae626aa5b, type: 3}
+--- !u!95 &5660525108356435474 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 974085637240844407, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4830845218025586277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5660525108356435500 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 974085637240844361, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4830845218025586277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &5660525108356435502 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 974085637240844363, guid: 9e9e0768a135b964e87a6b6ae626aa5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4830845218025586277}
+  m_PrefabAsset: {fileID: 0}

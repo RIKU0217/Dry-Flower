@@ -28,7 +28,7 @@ public class OgamePlayer : MonoBehaviour
 
     void Start()
     {
-        life = 6;
+        life = 1;
         //hPScore = GameObject.Find("HPScore").GetComponent<TextMeshProUGUI>();
     }
 
@@ -145,6 +145,7 @@ public class OgamePlayer : MonoBehaviour
             {
                 life = 0;
                 C_GManager.instance.isGameOver = true;
+                Debug.Log(life);
             }
             Destroy(other.gameObject);
         }
@@ -158,6 +159,7 @@ public class OgamePlayer : MonoBehaviour
             {
                 life = 0;
                 C_GManager.instance.isGameOver = true;
+                Debug.Log(life);
             }
             Destroy(other.gameObject);
         }
