@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class life : MonoBehaviour
+public class life_Fukumota : MonoBehaviour
 {
     private const int V = 1;
     public GameObject[] lifeArray = new GameObject[4];
     private int lifePoint = 3;
-    public static life instance;
-    public gameOver gameOver;
+    public static life_Fukumota instance;
+    public gameOver_Fukumota gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +38,8 @@ public class life : MonoBehaviour
             lifeArray[lifePoint + 1].SetActive(false);
             if (lifePoint == 0)
             {
-                player.instance3.disappearPlayer();
-                gameOver.instance2.gameOverSystem();
+                player_Fukumota.instance3.disappearPlayer();
+                gameOver_Fukumota.instance2.gameOverSystem();
             }
         }
     }

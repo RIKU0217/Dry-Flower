@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 465757608}
   - component: {fileID: 465757607}
   m_Layer: 5
-  m_Name: Game Over
+  m_Name: gameOver_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 515971005}
   - component: {fileID: 515971004}
   m_Layer: 0
-  m_Name: player
+  m_Name: player_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 585994160}
   - component: {fileID: 585994163}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: retryCanvas_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 1184123311}
   - component: {fileID: 1184123310}
   m_Layer: 0
-  m_Name: life
+  m_Name: life_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 1281784595}
   - component: {fileID: 1281784598}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GameOverText_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 1382272164}
   - component: {fileID: 1382272163}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: retry_Fukumota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

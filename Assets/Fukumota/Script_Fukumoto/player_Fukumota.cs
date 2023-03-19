@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class player : MonoBehaviour
+public class player_Fukumota : MonoBehaviour
 {
     public Rigidbody2D g;
     private Vector2 dir;
     private float speed = 3f;
     public GameObject j;
-    public static player instance3;
+    public static player_Fukumota instance3;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            life.instance.life_down();
+            life_Fukumota.instance.life_down();
             Debug.Log("è’ìÀ");
         }
     }

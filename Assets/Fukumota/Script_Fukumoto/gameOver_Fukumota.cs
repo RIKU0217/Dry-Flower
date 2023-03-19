@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameOver : MonoBehaviour
+public class gameOver_Fukumota : MonoBehaviour
 {
     public GameObject k;
-    public static gameOver instance2;
+    public static gameOver_Fukumota instance2;
     // Start is called before the first frame update
     void Start()
     {

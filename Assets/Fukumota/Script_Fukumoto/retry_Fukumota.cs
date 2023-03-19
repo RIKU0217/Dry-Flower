@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class retry : MonoBehaviour
+public class retry_Fukumota : MonoBehaviour
 {
-    private GameObject retryObject;
     private string sceneName;
     // Start is called before the first frame update
     void Start()
